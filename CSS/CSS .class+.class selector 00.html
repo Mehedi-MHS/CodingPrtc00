@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta name="viewport"content="width=device-width,initial-scale=1">
+<meta charset="utf-8" />
+<style type="text/css">
+.box1{width:100px;height:100px;border:1px solid black;}
+.box2{width:70px;height:70px;border:1px solid black;}
+.box1+.box2{background-color:orange;}/* it will select .box2 .This is as like p+p{} etc. */
+</style>
+</head>
+<body>
+
+<pre>
+<strong> CSS:</strong>
+ .box1{width:100px;height:100px;border:1px solid black;}
+ .box2{width:70px;height:70px;border:1px solid black;}
+ .box1+.box2{background-color:orange;}<mark>/* it will select .box2 .This is as like p+p{} etc. */</mark>
+ <strong>HTML:</strong>
+<mark> &lt;!--↓proper format.Follow the .box1 & .box2 sequence.Dont place any tag inside od .box1 & .box2 class.--&gt;</mark>
+ &lt;div class="box1" &gt;Not me&lt;/div&gt;
+ &lt;div class="box2" &gt;I will be selected&lt;/div&gt;
+ 
+ </pre>
+
+
+
+<div class="box1" >box1:Not me</div>
+<div class="box2" >box2:I will be selected</div>
+
+
+</body>
+</html>

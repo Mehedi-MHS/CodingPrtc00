@@ -1,0 +1,29 @@
+<html>
+<head>
+<title></title>
+<meta name="viewport"content="width=device-width,initial-scale=1">
+<meta charset="UTF-8" />
+<style type="text/css">
+input{
+ padding:5px;
+ border:1px solid black;
+ border-radius:5px;
+ outline-color:green;
+}
+</style>
+</head>
+<body>
+<h3>ASCII code viewer</h3><p>Enter any word,emoji to show its ASCII code.</p>
+<input type="text" oninput="mh(this)"placeholder="Enter to show ASCII code">
+<script type="text/javascript">
+function mh(a){
+var l=a.value.split("").length;
+  alert("&#"+a.value.charCodeAt(l-1)+";");
+  
+}
+
+</script>
+
+
+</body>
+</html>

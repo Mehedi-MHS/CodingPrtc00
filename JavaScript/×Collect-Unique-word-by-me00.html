@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <title></title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+</head>
+<body>
+
+
+  <script type="text/javascript" charset="utf-8">
+    let str = "Lorem ipsum dolor sit amet lorem ipsum did amet";
+    let selected_arr = [];
+    let total_arr = str.split(" ");
+
+    let length = total_arr.length;
+
+    for (var i = 0; i < length; i++) {
+
+      let word = total_arr[i].toLowerCase();
+      if (!selected_arr.includes(word)) {
+        selected_arr.push(word);
+      }
+
+      let selected_len = selected_arr.length;
+      let tmp = "";
+      for (var j = 0; j < selected_len; j++) {
+        tmp += selected_arr[j]+" ";
+      }
+      document.write(tmp);
+    }
+
+  </script>
+</body>
+</html>

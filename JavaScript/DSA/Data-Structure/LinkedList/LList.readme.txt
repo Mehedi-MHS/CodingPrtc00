@@ -1,0 +1,28 @@
+Linked List - Data Structute
+=============================
+1: milk-->bread-->egg-->bakon-->null
+2: Header-->bread-->egg-->bakon-->null
+
+*Null is used to identify the end of linked list.
+*Header is used to identify the start of linked list.
+
+>> we say that
+“bread” follows “milk”, not that “bread” is in the second position
+
+-A linked list is a collection of objects called nodes. Each node is linked to a successor
+node in the list using an object reference. The reference to another node is called a link.
+
+
+
++[Linked List is an alternative of Array.]
+
+Pros:
+i)Use for storing large data.Because array can contain limited size of data
+ii)Adding and removing element is easier than array
+
+Cons:
+i)Cannot access random element.It has to visit all the related nodes before visiting the actual element.
+
+
+[When random access is required, an array is the better data structure to use.]
+

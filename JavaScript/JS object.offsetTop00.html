@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta name="viewport"content="width=device-width,initial-scale=1">
+<meta charset="utf-8" />
+<style type="text/css">
+.item{width:100%;
+       height:100px;
+       text-align:center;
+       color:white;
+       font-size:25px;
+       margin-bottom:15px;
+      }
+.pink{
+       background-color:pink;
+       }
+.green{background-color:green;}
+       
+</style>
+</head>
+<body>
+<div id="one"class="item pink">Item 1</div>
+<div id="two"class="item green">Item 2</div>
+
+<script type="text/javascript">
+var one=document.getElementById("one");
+var two=document.getElementById("two");
+alert("Window.pageYOffset="+window.pageYOffset);
+alert("Item1.offsetTop="+one.offsetTop);
+alert("Item2.offsetTop="+two.offsetTop);
+
+</script>
+
+</body>
+</html>

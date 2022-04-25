@@ -1,0 +1,29 @@
+1: setTimeout() , Promise() are by default asynchronous
+2:promise is better than callback,and async-await is better than using .then() in promise
+3:"async" and "await" both are siblings. You cannot use one of them except other.
+*async-await is used to write the code in synchronous way but runs the code in asynchronous way.
+4: give priority in using "async-await"
+5: "async-await" is only used in promise invocation(execution). Not in definition.
+6:As there is no .catch() block in async await [like .then().catch() ], use try-catch instead.
+*If there is no reject in promise, then simplify the code using 
+Promise.resolve(messege);
+
+instead of
+
+var fun =new Promise(function(resolve){
+  resolve(messege);
+});
+
+
+7:Promise.all() -> To handle multiple promises at once,use promise.all([array of promises]) method.
+8:promise.race -> Competetion between promises that returns the first resolved promise result. Other promise results are skiped.
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta name="viewport"content="width=device-width,initial-scale=1">
+<meta charset="utf-8" />
+<style type="text/css">
+#highlighter{
+color:white;
+background-color:black;
+}
+</style>
+</head>
+<body>
+
+<div id="highlighter">
+   &lt;h1&gt;Hello world&lt;/h1&gt;
+</div>
+
+<script type="text/javascript">
+var code=document.querySelector("#highlighter").innerHTML;
+var str1='<span style="color:magenta;">&lt;';
+var str2='&gt;</span>';
+var changed=code.replaceAll("&lt;",str1).replaceAll("&gt;",str2);
+document.querySelector("#highlighter").innerHTML=changed;
+</script>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+//variable
+@width:10px;
+@height:@width+10px;
+@bgcolor:#00ccff;
+.box {
+  width:@width;
+  height:@height;
+  background-color:@bgcolor;
+  animation:mh 1s 1;
+}
+@keyframes mh{
+  from {width: @width;}to {width:@height;}
+}
+//mixin
+div#commentbox{
+  text-align: center;
+  .box();
+}
+/*Nesting*/
+#header {
+  width: @width*50px;
+  height: @height - 5px;//must give space around minus - operator and other operators except * 
+  .a {
+    text-decoration: none;
+  }
+  #btn {
+    .box();
+  }
+}

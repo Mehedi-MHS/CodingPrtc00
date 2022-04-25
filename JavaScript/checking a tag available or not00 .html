@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+</head>
+<body>
+<p>checking a tag is available or not</p>
+<noscript>You need to enable javascript</noscript>
+<script type="text/javascript">
+if(document.querySelector("head")){
+  alert("Head tag is available"); //√
+}
+if(document.querySelector("iframe")){
+  alert("iframe tag is available");
+}else{
+  alert("iframe tag not available"); //√
+}
+</script>
+</body>
+</html>

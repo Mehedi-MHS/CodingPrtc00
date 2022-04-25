@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Creating css by js.00</title>
+<meta name="viewport"content="width=device-width,initial-scale=1">
+<meta charset="utf-8" />
+</head>
+<body>
+<h1>Creating CSS by JS-single line method</h1>
+<p>Here we will create pure CSS in javascript. Then append it to body or head tag. Here head tag</p>
+
+<h3>I am styled by CSS using javascript innerHTML method</h3>
+
+<script type="text/javascript">
+var head=document.querySelector("head");//selecting head tag
+
+var cs='<style type="text/CSS">h3{color:green;background-color:orange;box-shadow:0px 1px 5px black;}</style>';//writing multiline in a string is not working.For writing multiline,use += method
+head.innerHTML=cs;
+</script>
+
+</body>
+</html>

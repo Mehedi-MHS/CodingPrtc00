@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta name="viewport"content="width=device-width,initial-scale=1">
+<meta charset="utf-8" />
+<link rel="stylesheet" href="/storage/emulated/0/web assets/css/bootstrap.min.css">
+<link rel="stylesheet" href="/storage/emulated/0/web assets/css/font-awesome.css">
+<style type="text/css">
+.item1{
+  width:150px;
+  height:100px;
+}
+.item2{
+  width:100px;
+  height:100px;
+}
+.item3{
+  width:50px;
+  height:100px;
+}
+.green{
+  background-color:green;
+  border:1px solid white;
+}
+.blue{
+  background-color:steelBlue;
+  border:1px solid white;
+}
+.orange{
+  background-color:orange;
+  border:1px solid white;
+}
+</style>
+</head>
+<body>
+<h1>Using HTML</h1>
+<div class="alert alert-info">
+   <strong>Note:</strong>3 layout modes are built in. These are "masonry","fitRows","vertical". To use other layouts,its needed to install them first</div>
+
+<div class="abc" data-isotope='{"itemSelector":".item","layoutMode":"fitRows"}'>
+   <div class="item item1 green" ></div>
+   <div class="item item2 blue" ></div>
+   <div class="item item3 orange" ></div>
+   <div class="item item1 blue" ></div>
+   <div class="item item2 green" ></div>
+   <div class="item item3 blue" ></div>
+   <div class="item item1 orange" ></div>
+</div>
+   
+ 
+
+<script src="/storage/emulated/0/web assets/js/bootstrap.min.js"></script>
+<script src="/storage/emulated/0/web assets/isotope layout/isotope.pkgd.min.js"></script>
+</body>
+</html>

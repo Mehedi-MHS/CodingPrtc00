@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title></title>
+  </head>
+  <body>
+    <button class="button">Btn1</button>
+   <button class="button">Btn2</button>
+   <button class="button">Btn3</button>
+  <!--give a common class name to every button -->
+    
+    <script type="text/javascript" charset="utf-8">
+     document.querySelectorAll(".button").forEach(function(a){
+       a.addEventListener("click",function(){
+         alert(this.innerHTML);
+       });
+     });
+    </script>
+  </body>
+</html>

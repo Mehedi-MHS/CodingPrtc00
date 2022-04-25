@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Simple toast be me</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <style type="text/css" media="all">
+      *{
+        box-sizing:border-box;
+      }
+      body{
+        text-align:center;
+        height:700px;
+        background:#2fad65;
+        border-bottom:10px solid grey;
+      }
+      .btn{
+        background: #0029ff;
+        color:#ffffff;
+        border:none;
+        width:45vmin;
+        height:13vmin;
+        font-size:5vmin;
+        font-weight:600;
+        text-transform:uppercase;
+        box-shadow:0px 1px 1px #000000;
+      }
+      .toast-container{
+        display:grid;
+        place-items:center;
+        display:none;
+      }
+      .toast{
+        max-width:90%;
+        color:#ffffff;
+        background:#00000069;
+        padding:5px 9px ;
+        border-radius:100px;
+        position:fixed;
+        margin:0px auto;
+      }
+      .toast p{
+        position:relative;
+        margin:3px auto;
+      }
+      .toast-transition{
+        animation:mh 15s 1;
+        transition:3s ease-out;
+      }
+      @keyframes mh{
+        0%{opacity:0;bottom:-10px;}
+        3%{opacity:1;bottom:20vmin;}
+        5%{bottom:17vmin;}
+        40%{opacity:0};
+      }
+      
+    </style>
+    
+  </head>
+  <body>
+    <p>Simple toast prtc by me</p>
+    <button id="btn"class="btn">Show toast</button>
+  <div class="toast-container">
+    <div class="toast">
+      <p>Simple Toast example</p>
+    </div>
+  </div>  
+    
+    
+    <script type="text/javascript" charset="utf-8">
+      document.getElementById("btn").addEventListener("click",function(){
+        var container=document.querySelector(".toast-container");
+        var toast=document.querySelector(".toast");
+        container.style.display="block";
+        container.style.display="grid";
+        toast.classList.add("toast-transition");
+        setTimeout(function(){
+          toast.classList.remove("toast-transition");
+          container.style.display="none";
+        },4500);
+        
+      });
+    </script>
+  </body>
+</html>

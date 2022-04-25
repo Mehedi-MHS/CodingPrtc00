@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Js call,apply,bind method</title>
+  <meta name="viewport"content="width=device-width,initial-scale=1">
+  <meta charset="UTF-8" />
+  <style type="text/css">
+    pre {
+      width: 90%;
+      padding: 5px;
+      color: cyan;
+      background: black;
+      border-left: 3px solid green;
+      position: relative;
+      overflow: auto;
+    }
+    pre:before {
+      position: absolute;
+      content: "JS code";
+      width: 50px;
+      height: 10px;
+      background: orange;
+      display: table;
+      color: black;
+      top: 0;
+      right: 0;
+      padding: 3px;
+      border-bottom-left-radius: 7px;
+    }
+    noscript {
+      color: red;
+    }
+
+  </style>
+</head>
+<body>
+
+  <noscript>
+    Please enable javascript to run this program
+  </noscript>
+  <h1>Call(),Bind(),Apply()</h1>
+  <p>
+    All in one example
+  </p>
+  <pre></pre>
+  <script type="text/javascript"id="pr">
+    var person = {
+      name: "John Doe"
+    };
+    var greeting = function(a, b, c) {
+      return `Welcome Mr ${this.name} to ${a} from ${b} . (method:${c}) <br >`;
+    }
+    //1:Using Call() or Function.prototype.Call()
+    document.write(greeting.call(person, "Noakhali", "Chattagram", "call"));
+    
+    //Using apply() or Function.prototype.apply()
+ var apply_arr=["Noakhali","Chattagram","apply"];
+ document.write(greeting.apply(person,apply_arr));
+ 
+ //Using bind() or Function.prototype.bind()
+    //way:1
+    var bound1 = greeting.bind(person);
+    document.write(bound1("Noakhali","Chattagram","bind"));
+   //way: 2 
+   var bound2 = greeting.bind(person,"Noakhali","Chattagram","bind");
+   document.write(bound2());
+  </script>
+  <script type="text/javascript">
+    document.querySelector("pre").innerHTML = document.querySelector("#pr").innerHTML;
+  </script>
+</body>
+</html>

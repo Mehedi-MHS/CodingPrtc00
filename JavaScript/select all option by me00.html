@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Select all method by me</title>
+<meta name="viewport"content="width=device-width,initial-scale=1">
+<meta charset="UTF-8" />
+<style type="text/css">
+noscript{
+ color:red;
+}
+</style>
+</head>
+<body>
+<noscript>Please enable javascript to run this program</noscript>
+
+<div>Select all<input type="checkbox"class="parent"></div><br>
+<div>Apple<input type="checkbox"class="child"></div>
+<div>Mango<input type="checkbox"class="child"></div>
+<div>Banana<input type="checkbox"class="child"></div>
+
+
+<script type="text/javascript">
+var parent=document.querySelector(".parent");
+var child=document.querySelectorAll(".child");
+var tracker=0; 
+parent.addEventListener("change",function(){
+   if(this.checked){
+      tracker=1;
+      }else if(!this.checked){
+         tracker=0;
+      }
+      
+    child.forEach(function(b){
+      if(tracker==1){
+         b.checked=true;
+      }else if(tracker==0){
+         b.checked=false;
+      }
+    });
+});
+
+</script>
+</body>
+</html>

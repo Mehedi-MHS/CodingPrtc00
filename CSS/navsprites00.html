@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Navsprites  00</title>
+<meta name="viewport"content="width=device-width,initial-scale=1">
+<meta charset="utf-8" />
+<style type="text/css">
+.icon{
+  width:46px;
+  height:44px;
+  background:url(../img/img_navsprites_hover.gif) no-repeat ;
+}
+
+.icon1{
+  background-position:0px 0px; /*top left*/
+}
+
+.icon2{
+  background-position:0px -45px;
+}
+
+.icon3{
+  width:43px;
+  background-position:-47px 0px;
+}
+
+.icon4{
+  background-position:-91px 0;
+}
+
+.icon5{
+  width:43px;
+  background-position:-47px -45px;
+}
+
+.icon6{
+  background-position:-91px -45px;
+}
+
+</style>
+</head>
+<body>
+<h1>Navsprites</h1>
+<ul>
+   Example explained:
+   <li>width: 46px; height: 44px; - Defines the portion of the image we want to use</li>
+   <li>background: url(img_navsprites.gif) 0 0;(x,y) - Defines the background image and its position (top 0px, left 0px)</li>
+   <li style="color:silver;"><strong>xpos & ypos :</strong>The first value is the horizontal position and the second value is the vertical. The top left corner is 0 0. Units can be pixels (0px 0px) or any other CSS units. If you only specify one value, the other value will be 50%. You can mix % and positions</li>
+   <li><strong>Here we have to use (-x,-y) instead of (x,y)</strong></li>
+   <li>
+      <strong><code> 00 →→(-x)<br>
+           ↓<br>
+           ↓ (-y)
+      </code></strong>
+   </li>
+</ul>
+<p>Main image</p>
+<img src="../img/img_navsprites_hover.gif">
+
+<br><hr>
+<p>navsprites (by me)</p>
+<div class="icon icon1"></div>
+<div class="icon icon2"></div>
+<div class="icon icon3"></div>
+<div class="icon icon4"></div>
+<div class="icon icon5"></div>
+<div class="icon icon6"></div>
+
+
+</body>
+</html>

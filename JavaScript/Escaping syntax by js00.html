@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Escaping code by js</title>
+<meta name="viewport"content="width=device-width,initial-scale=1">
+<meta charset="utf-8" />
+<style type="text/css">
+
+</style>
+</head>
+<body>
+<h3>Automatic syntax escaping by javascript</h3>
+<p>E.g: Here js will convert "<" sign into &amp;lt;</p>
+
+<pre id="m">
+   <div id="haha">
+       <p>Hi</p>
+       <p>Bye</p>
+   </div>
+</pre>
+
+
+
+<script type="text/javascript">
+var c=document.querySelector("#m").innerHTML;
+var sanitize=c.replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;").replaceAll("\"","&quot;");
+/****
+     WARNING!!!!
+=====================
+Place c.replaceAll("&","&amp;") at the beginning and then place others.
+
+if you write like this : c.replaceAll("<","&lt;").replaceAll(">","&gt;").replaceAll("\"","&quot;").replacAll("&","&amp;") , 
+			Demo:					"<"→&lt;        ">"→&gt;					"→&quot;				(&lt;→&amp;lt; , &gt;→&amp;gt; , &quot;→&amp;quot;)				
+																										   ↑				
+then the program will fisrt convert (<)→(&lt;) and then (&lt;)→(&amp;lt;)
+*****/
+
+
+document.querySelector("#m").innerHTML=sanitize;
+
+</script>
+
+
+</body>
+</html>

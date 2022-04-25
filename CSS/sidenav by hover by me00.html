@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sidenav by hover 00 by me</title>
+<meta name="viewport"content="width=device-width,initial-scale=1">
+<meta charset="utf-8" />
+<link rel="stylesheet"href="/storage/emulated/0/web assets/bootstrap-icons/bootstrap-icons.css">
+<link rel="stylesheet" href="/storage/emulated/0/web assets/css/bootstrap.min.css">
+<style type="text/css">
+.header{
+  width:100%;
+  height:50px;
+  background-color:darkblue;
+}
+
+.icon,.logo{
+  color:white;
+  font-size:29px;
+}
+
+.panel{
+  width:50%;
+  height:100%;
+  position:fixed;
+  background-color:black;
+  transition:0.4s;
+  opacity:0;
+  right:-300px;
+}
+
+.panel a{
+  text-decoration:none;
+  color:silver;
+  padding:8px 8px 8px 32px;
+  display:block;/*important*/
+}
+
+.panel a:hover{
+  background-color:green;
+  color:white;
+}
+
+.header .icon:hover~.panel{
+  opacity:1;
+  right:0;
+}
+
+
+</style>
+</head>
+<body>
+
+<h1>Sidenav by hover by me00</h1>
+
+
+<div class="header d-flex  justify-content-around">
+   <div class="icon">
+      <i class="bi bi-list"></i>
+   </div>
+   <div class="logo">Logo&trade;</div>
+   <div class="panel">
+      <a href="#" ><i class="bi bi-house" ></i>Home</a>
+      <a href="#" >Contact</a>
+      <a href="#" >About us</a>
+   </div>
+</div>
+   
+
+<script src="/storage/emulated/0/web assets/js/bootstrap.min.js"></script>
+</body>
+</html>

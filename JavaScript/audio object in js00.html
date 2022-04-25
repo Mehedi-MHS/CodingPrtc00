@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta name="viewport"content="width=device-width,initial-scale=1">
+<style type="text/css">
+
+
+</style>
+</head>
+<body>
+
+<button onclick="pl()">Play audio</button>
+<button onclick="ps()">Pause audio</button>
+<script type="text/javascript">
+var aud=new Audio("/storage/emulated/0/web assets/audio/background.wav");
+aud.loop=true;
+function pl(){
+aud.play();
+}
+function ps(){
+  aud.pause();
+}
+
+
+
+</script>
+
+
+
+
+</body>
+</html>

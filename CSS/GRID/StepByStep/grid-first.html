@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <style type="text/css" media="all">
+    /*general styling*/
+    .style>div{
+      background: #30059a;
+      border:1px solid #5af069;
+    }
+    .style>div{
+      font-size: 2rem;
+      color:#fff;
+      font-weight:500;
+    }
+    code{
+      color:red;
+      background:#87faf175;
+      padding:3px;
+      border-radius:3px;
+    }
+    
+     .one{
+        background: red !important;
+      }
+    
+/***      **********      ***/
+    
+    /*main style:01*/
+      .container1{
+        width:90%;
+        height:350px;
+        display:grid;
+        grid-template-columns:1fr 1fr 1fr;/* 3 column*/
+        grid-template-rows:1fr 1fr 1fr;/*3 rows*/
+      }
+      
+          /*main style:02*/
+      .container2{
+        width:90%;
+        height:350px;
+        display:grid;
+        grid-template:1fr 1fr 1fr / 1fr 1fr 1fr;
+      }
+      
+         /*main style:03*/
+      .container3{
+        width:90%;
+        height:350px;
+        display:grid;
+        grid-template:repeat(3,1fr) / repeat(3,1fr);
+      }
+      
+    
+       /*main style:04*/
+      .container4{
+        width:90%;
+        height:350px;
+        display:grid;
+        grid-template:repeat(3,1fr) /repeat(3,1fr);
+        grid-column-gap:5%;
+      }
+      
+    /*main style:05*/
+      .container5{
+        width:90%;
+        height:350px;
+        display:grid;
+        grid-template:repeat(3,1fr) /repeat(3,1fr);
+        grid-row-gap:5%;
+      }
+  
+  
+    /*main style:06*/
+      .container6{
+        width:90%;
+        height:350px;
+        display:grid;
+        grid-template:repeat(3,1fr) /repeat(3,1fr);
+        grid-gap:5%;
+      }
+  
+
+
+    /*main style:07*/
+      .container7{
+        width:90%;
+        height:350px;
+        display:grid;
+        grid-template:repeat(3,1fr) /repeat(3,1fr);
+        grid-gap:5% 2%;
+      }
+  
+   /*main style:08*/
+      .container8{
+        width:90%;
+        height:350px;
+        display:grid;
+        grid-template:repeat(3,1fr) /repeat(3,1fr);
+      }
+   .container8>.one{
+     grid-column-start:2;
+
+   }
+  
+  /*main style:008*/
+      .container08{
+        width:90%;
+        height:350px;
+        display:grid;
+        grid-template:repeat(3,1fr) /repeat(3,1fr);
+      }
+   .container08>.one{
+     grid-column-start:3;
+
+   }
+  
+  
+  /*main style:09*/
+      .container9{
+        width:90%;
+        height:350px;
+        display:grid;
+        grid-template:repeat(3,1fr) /repeat(3,1fr);
+      }
+   .container9>.one{
+     grid-column-end:3;
+   }
+  
+  
+  
+  /*main style:10*/
+      .container10{
+        width:90%;
+        height:350px;
+        display:grid;
+        grid-template:repeat(3,1fr) /repeat(3,1fr);
+      }
+   .container10>.one{
+     grid-column-start: 1;
+     grid-column-end:3;
+
+   }
+  
+
+  /*main style:11*/
+      .container11{
+        width:90%;
+        height:350px;
+        display:grid;
+        grid-template:repeat(3,1fr) /repeat(3,1fr);
+      }
+   .container11>.one{
+     grid-column-start: 1;
+     grid-column-end:-1;
+
+   }
+  
+  
+   /*main style:12*/
+      .container12{
+        width:90%;
+        height:350px;
+        display:grid;
+        grid-template:repeat(3,1fr) /repeat(3,1fr);
+      }
+   .container12>.one{
+     grid-column:1/-1;
+   }
+  
+  
+   /*main style:13*/
+      .container13{
+        width:90%;
+        height:350px;
+        display:grid;
+        grid-template:repeat(3,1fr) /repeat(3,1fr);
+      }
+   .container13>.one{
+     grid-row-start:2;
+
+   }
+  
+  
+  
+  /*main style:14*/
+      .container14{
+        width:90%;
+        height:350px;
+        display:grid;
+        grid-template:repeat(3,1fr) /repeat(3,1fr);
+      }
+   .container14>.one{
+     grid-row-start:3;
+   }
+  
+  
+  
+  /*main style:15*/
+      .container15{
+        width:90%;
+        height:350px;
+        display:grid;
+        grid-template:repeat(3,1fr) /repeat(3,1fr);
+      }
+   .container15>.one{
+     grid-row-end:3;
+   }
+  
+
+  /*main style:16*/
+      .container16{
+        width:90%;
+        height:350px;
+        display:grid;
+        grid-template:repeat(3,1fr) /repeat(3,1fr);
+      }
+   .container16>.one{
+     grid-row-start: 1;
+     grid-row-end:3;
+
+   }
+  
+  
+   /*main style:17*/
+      .container17{
+        width:90%;
+        height:350px;
+        display:grid;
+        grid-template:repeat(3,1fr) /repeat(3,1fr);
+      }
+   .container17>.one{
+     grid-row-start:1;
+     grid-row-end:-1;
+   }
+  
+  
+  /*main style:18*/
+      .container18{
+        width:90%;
+        height:350px;
+        display:grid;
+        grid-template:repeat(3,1fr) /repeat(3,1fr);
+      }
+   .container18>.one{
+     grid-row:1/-1;
+   }
+  
+  
+  /*main style:19*/
+      .container19{
+        width:90%;
+        height:350px;
+        display:grid;
+        grid-template:repeat(3,1fr) /repeat(3,1fr);
+      }
+   .container19>.one{
+     grid-row:1/span 2;
+   }
+  
+  /*main style:20*/
+      .container20{
+        width:90%;
+        height:350px;
+        display:grid;
+        grid-template:repeat(3,1fr) /repeat(3,1fr);
+      }
+   .container20>.one{
+     grid-column:1/span 2;
+   }
+  
+      
+      
+      
+     
+    </style>
+  </head>
+  <body>
+    <h3>Style:01</h3>
+    <p>Simple grid layout using <code>grid-template-columns</code> and <code>grid-template-rows</code></p>
+    <div class="style container1">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+    </div>
+    <hr />
+    
+    
+    
+      <h3>Style:02</h3>
+    <p>Simple grid layout using <code>grid-template:rows/column</code>. Shorthand of <code>grid-template-rows and grid-template-columns</code></p>
+    <div class="style container2">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+    </div>
+    <hr />
+    
+     <h3>Style:03: repeat(number,value)</h3>
+    <p>As like loop. eg: <code>grid-template-columns:repeat(3,1fr)</code>instead of <code>grid-template-columns:1fr 1fr 1fr</code></p>
+    <div class="style container3">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+    </div>
+    <hr />
+    
+    
+    
+      <h3>Style:04:grid-column-gap</h3>
+    <p>Gap between columns. Shorthand is <code>grid-gap:row column</code>or<code>grid-gap: value</code></p>
+    <div class="style container4">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+    </div>
+    <hr />
+    
+    
+     
+      <h3>Style:05:grid-row-gap</h3>
+    <p>Gap between rows. Shorthand is <code>grid-gap:row column</code>or<code>grid-gap: value</code></p>
+    <div class="style container5">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+    </div>
+    <hr />
+   
+   
+    
+      <h3>Style:06:grid-gap:5%;</h3>
+    <p>Gap between both rows and columns</p>
+    <div class="style container6">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+    </div>
+    <hr />
+
+
+
+   <h3>Style:07:grid-gap:5% 2%;</h3>
+    <p>Gap between both rows and columns. <code>grid-gap:row column</code></p>
+    <div class="style container7">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+    </div>
+    <hr />
+
+  
+   <h3>Style:08:grid-column-start:2;</h3>
+    <p>Specific child will start (from left side) from specific line <code>grid-column-start:line-number-here</code></p>
+    <div class="style container8">
+      <div class="one">1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+    </div>
+    <hr />
+
+
+
+  <h3>Style:008:grid-column-start:3;</h3>
+    <p>Specific child will start (from left side) from specific line <code>grid-column-start:line-number-here</code></p>
+    <div class="style container08">
+      <div class="one">1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+    </div>
+    <hr />
+
+
+
+<h3>Style:09:grid-column-end:3;</h3>
+    <p>Specific child will end(from left side)to specific line <code>grid-column-end:line-number-here</code></p>
+    <div class="style container9">
+      <div class="one">1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+    </div>
+    <hr />
+
+
+
+<h3>Style:10:grid-column-start:1;grid-column-end:3;</h3>
+    <p>Specific child will start at beginning line and end(from left side)to specific line <code>grid-column-start:line-number-here; grid-column-end:line-number-here</code></p>
+    <div class="style container10">
+      <div class="one">1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+    </div>
+    <hr />
+
+
+<mark>grid-column-end:-1; indicates the end line of container</mark>
+<h3>Style:11:grid-column-start:1;grid-column-end:-1;</h3>
+    <p>Specific child will start at beginning line and end(from left side)to specific line <code>grid-column-start:line-number-here; grid-column-end:line-number-here</code></p>
+    <div class="style container11">
+      <div class="one">1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+    </div>
+    <hr />
+   
+   
+  <h3>Style:12:grid-column:column-start/column-end</h3>
+    <p>Shorthand property of <code>grid-column-start:line-number-here; grid-column-end:line-number-here</code></p>
+    <div class="style container12">
+      <div class="one">1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+    </div>
+ 
+    
+  /**************************-****-*-*----********/
+  
+  
+   <h3>Style:13:grid-row-start:2;</h3>
+    <p>Specific child will start (from top side) from specific line <code>grid-row-start:line-number-here</code></p>
+    <div class="style container13">
+      <div class="one">1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+    </div>
+    <hr />
+
+
+
+  <h3>Style:14:grid-row-start:3;</h3>
+    <p>Specific child will start (from top side) to specific bottom line <code>grid-row-start:line-number-here</code></p>
+    <div class="style container14">
+      <div class="one">1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+    </div>
+    <hr />
+
+
+
+<h3>Style:15:grid-row-end:3;</h3>
+    <p>Specific child will end(from tip side)to specific (here last  bottom line) <code>grid-row-end:line-number-here</code></p>
+    <div class="style container15">
+      <div class="one">1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+    </div>
+    <hr />
+
+
+
+<h3>Style:16:grid-row-start:1;grid-row-end:3;</h3>
+    <p>Specific child will start at beginning line and end(from top side)to specific bottom line <code>grid-row-start:line-number-here; grid-row-end:line-number-here</code></p>
+    <div class="style container16">
+      <div class="one">1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+    </div>
+    <hr />
+
+
+<mark>grid-row-end:-1; indicates the bottom end line of container</mark>
+<h3>Style:17:grid-row-start:1;grid-row-end:-1;</h3>
+    <p>Specific child will start at beginning line and end(from top side)to specific line <code>grid-row-start:line-number-here; grid-row-end:line-number-here</code></p>
+    <div class="style container17">
+      <div class="one">1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+    </div>
+    <hr />
+   
+   
+  <h3>Style:18:grid-row:row-start/row-end</h3>
+    <p>Shorthand property of <code>grid-row-start:line-number-here; grid-row-end:line-number-here</code></p>
+    <div class="style container18">
+      <div class="one">1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+    </div>
+ 
+ 
+ <h3>Style:19:span (in row)</h3>
+    <p>Specific child will cover(fill) nth number of rows . eg: <code>grid-row:1/span 2;</code>. Here <code>grid-row-end:span 2 </code> is equivalent to <code>grid-row-end:3</code>. Same theory for <strong>column</strong></p>
+    <div class="style container19">
+      <div class="one">1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+    </div>
+ 
+ 
+  <h3>Style:20:span (in columns)</h3>
+    <p>Specific child will cover(fill) nth number of columns eg: <code>grid-column:1/span 2;</code>. Here <code>grid-column-end:span 2 </code> is equivalent to <code>grid-column-end:3</code>. Same theory for <strong>row</strong></p>
+    <div class="style container20">
+      <div class="one">1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+    </div>
+ 
+    
+    
+    
+    
+    
+    
+  </body>
+</html>

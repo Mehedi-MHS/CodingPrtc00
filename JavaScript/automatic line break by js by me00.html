@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta name="viewport"content="width=device-width,initial-scale=1">
+<style type="text/css">
+#result{
+  border:1px solid black;
+  overflow:scroll;
+  display:block;
+  
+}
+</style>
+</head>
+<body>
+
+
+<p>Automatic line break by js by me</p>
+<i>Must use inline width and height to get these values</i>
+<div id="result"style="width:150px;height:200px;"></div>
+<script type="text/javascript">
+"use strict";
+var parent=document.getElementById("result");
+var input=prompt("\tEnter something"," Enter here your desired text to view");
+var input_arr=input.split("");
+var box_width_string=parent.style.width.toString();//150px
+var box_width_num=box_width_string.slice(0,box_width_string.length-2); //removing "px" from 150px.that means getting only number for later use
+//i am taking 5px for each word
+var word_width=3;//px
+var word_per_line=Math.floor(box_width_num/word_width);
+var total_lines=Math.ceil(input_arr.length/word_per_line);
+alert("box-width:"+box_width_num+"\nword-per-line:"+word_per_line+"\nTotal-lines:"+total_lines+"\narray-length:"+input_arr.length+"\nInput:"+input);
+var index1=0,index2=1;
+var child="";
+for(var i=0;i<total_lines;i++){
+  alert("index1:"+index1+"\nIndex2:"+index2);
+  child+=input.slice(index1*word_per_line,index2*word_per_line)+"<br>";
+  index1++;
+  index2++;
+}
+parent.innerHTML=child;
+</script>
+
+</body>
+</html>

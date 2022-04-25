@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta name="viewport"content="width=device-width,initial-scale=1">
+<meta charset="UTF-8" />
+<style type="text/css">
+*:not(pre){
+  font-family: none;
+}
+pre{
+  width:90%;
+  padding:5px;
+  color:cyan;
+  background:black;
+  border-left:3px solid green;
+  position:relative;
+  overflow:auto;
+}
+pre:before{
+  position:absolute;
+  content:"JS code";
+  width:50px;
+  height:10px;
+  background:orange;
+  display:table;
+  color:black;
+  top:0;
+  right:0;
+  padding:3px;
+  border-bottom-left-radius:7px;
+}
+noscript{
+  color:red;
+}
+
+</style>
+</head>
+<body>
+
+<noscript>
+   Please enable javascript to run this program
+</noscript>
+<h1>Immediately Invoked Function</h1>
+<small>Sometimes you don't want to have your function accessible/stored as a variable. You can create an Immediately
+Invoked Function Expression (IIFE for short). These are essentially self-executing anonymous functions. They have
+access to the surrounding scope, but the function itself and any internal variables will be inaccessible from outside.
+An important thing to note about IIFE is that even if you name your function, IIFE are not hoisted like standard
+functions are and cannot be called by the function name they are declared with.</small>
+<pre></pre>
+<script type="text/javascript"id="pr">
+///example 01
+(function (){
+  document.write("ex01:I've run - but can't be run again because I'm immediately invoked at runtime,leaving behind only the result I generate");
+}()); //texts........
+
+//example02:placing bracket outside
+(function (){
+  document.write("<br>ex:02 This is IIFE too");
+})();
+
+//ex:03 passing function parameter
+(function (msg){
+  document.write("<br>"+msg);
+})("ex:03--passed parameter");
+
+
+//ex:04 returning value to the surrounding scope
+var example=(function (){
+  return 31;
+}());
+console.log (example); //31
+
+//ex:05 arrow version of immediately invoked function
+(()=>console.log("IIFE ES6 version"))(); //texts....
+
+
+</script>
+<script type="text/javascript">
+document.querySelector("pre").textContent=document.querySelector("#pr").innerHTML;
+</script>
+</body>
+</html>

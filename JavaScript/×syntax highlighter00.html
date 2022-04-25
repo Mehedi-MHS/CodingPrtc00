@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta name="viewport"content="width=device-width,initial-scale=1">
+<meta charset="UTF-8" />
+<style type="text/css">
+pre{
+  max-width:100%;
+  height:250px;
+  overflow:auto;
+  border-left:2px solid blue;
+  color:cyan;
+  background:black;
+}
+</style>
+</head>
+<body>
+<h1>syntax highlighter project(×not done)</h1>
+<pre id="p">
+  &lt;h1&gt;Hello world&lt;/h1&gt;
+  &lt;p style="color:green;"&gt;I am green color&lt;p/&gt;
+</pre>
+<script type="text/javascript">
+let highlight=[{"key":'"',"color":"red"},{"key":"&lt;","color":"orange"},{"key":"&gt;","color":"orange"},{"key":"(","color":"tomato"},{"key":")","color":"tomato"}];//Important note:first replace " , ; ' symbols. if you replace these symbols later,it will replace another replaced symbol. I mean from the string that is replaced for colouring .;
+let arrlength=highlight.length;
+let primary=document.querySelector("#p").innerHTML;
+var storage=[primary];
+for(var x=0;x<arrlength;x++){
+ let txt=storage[0].replaceAll(highlight[x].key,'<span style="color:'+highlight[x].color+';">'+highlight[x].key+'</span>');
+ storage.shift();
+ storage.push(txt);
+}
+document.querySelector("#p").innerHTML=storage[0];
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,10 @@
+#A callback or callback function is a function that is an argument of a function or method
+call.
+
+The following is an example of a callback:
+const myArray = ['a', 'b'];
+const callback = (x) => console.log(x);
+myArray.forEach(callback);
+// Output:
+// 'a'
+// 'b'

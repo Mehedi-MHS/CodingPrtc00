@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta name="viewport"content="width=device-width,initial-scale=1">
+<meta charset="UTF-8" />
+<style type="text/css">
+pre{
+  width:90%;
+  padding:5px;
+  color:cyan;
+  background:black;
+  border-left:3px solid green;
+  position:relative;
+  overflow:auto;
+}
+pre:before{
+  position:absolute;
+  content:"JS code";
+  width:50px;
+  height:10px;
+  background:orange;
+  display:table;
+  color:black;
+  top:0;
+  right:0;
+  padding:3px;
+  border-bottom-left-radius:7px;
+}
+noscript{
+  color:red;
+}
+
+</style>
+</head>
+<body>
+
+<noscript>
+   Please enable javascript to run this program
+</noscript>
+<p><strong>apply</strong> method used in Math.max() </p>
+<p>We can also use "this" instead of "null" in the program.But null is perfect here</p>
+<pre></pre>
+<script type="text/javascript"id="pr">
+var num=[1,7,9,11,35,5];
+//before using apply
+console.log(Math.max(num));//NaN
+//after using apply
+console.log(Math.max.apply(null,num));//35
+
+</script>
+<script type="text/javascript">
+document.querySelector("pre").innerHTML=document.querySelector("#pr").innerHTML;
+</script>
+</body>
+</html>

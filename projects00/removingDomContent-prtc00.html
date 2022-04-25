@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <title></title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <style type="text/css" media="all">
+    * {
+      box-sizing: border-box;
+      font-family:none;
+    }
+    #root {
+      border: 1px solid grey;
+      max-width: 95%;
+      border-radius: 5px;
+      padding: 1px;
+    }
+    .container{
+      width:100%;
+      height:45px;
+      padding:7px auto;
+      background:skyBlue;
+      border-radius:2px;
+      text-align:center;
+      margin:3px auto;
+      position:relative;
+      overflow:hidden;
+      animation: mh 1s 1;
+    }
+    @keyframes mh{
+      from{width:0px;}to{width:100%;}
+    }
+    .conrainer p{
+      font-size:25px;
+      position:relative;
+      padding:7px auto;
+    }
+    .delete{
+      width:29px;
+      height:29px;
+      color:red;
+      background:#fff;
+      border-radius:300px;
+      font-weight:350;
+      font-size:1.5rem;
+      position:absolute;
+      right:1px;
+      top:-5px;
+    }
+   
+  </style>
+</head>
+<body>
+  <noscript>
+    Please enable Javascript.
+  </noscript>
+  <button id="add">Add Element</button>
+  <br />
+  <div id="root"></div>
+
+  <script type="text/javascript" charset="utf-8">
+    function UI(){
+      this.generateQuote = generateQuote;
+      this.append = append;
+      this.remove = remove;
+    }
+  
+    function generateQuote() {
+      let quotes = ["Do or die",
+        "Tit for tat",
+        "Good Morning",
+        "Honesty is the best policy"];
+      let max = 3,
+      min = 0,
+      randomNum = Math.floor(Math.random()*(max-min+1)+min);
+      return quotes[randomNum];
+    }
+  
+    function append(txt) {
+      let main = document.getElementById("root"),
+      div=document.createElement("div");
+      div.className="container";
+      let str = `<p>${txt}</p><span class="delete">&times</span>`; //only appendChild donot works for only string.
+     div.innerHTML=str;
+      main.appendChild(div);
+    }
+  
+    function remove(data) {
+      if (data.className == "delete" && window.confirm("Are you sure to delete this quote? ")) {
+        data.parentElement.remove();
+      }
+    }
+  
+  var ui=new UI();
+  
+  document.getElementById("add").addEventListener("click",function(){
+  ui.append(ui.generateQuote());
+  });
+  
+ document.querySelector("#root").addEventListener("click",function(e){
+   ui.remove(e.target);
+ });
+  
+  
+  
+  
+  </script>
+
+</body>
+</html>

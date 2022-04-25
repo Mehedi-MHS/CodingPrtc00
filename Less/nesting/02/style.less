@@ -1,0 +1,22 @@
+/*Nested At-Rules and bubbling*/
+.component{
+  width: 300px;
+  @media (min-width:768px){
+    width: 550px;
+    @media (min-resolution:192dpi){
+      background: url("/fun/img.jpg");
+    }
+  }
+  @media (min-width:992px){
+    width:900px;
+  }
+}
+
+/*Escaping--as like alias*/
+@min768:~"(min-width:768px)";
+.container{
+  width: 100px;
+  @media @min768 {
+    width:350px;
+  }
+}

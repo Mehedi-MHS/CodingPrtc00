@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta name="viewport"content="width=device-width,initial-scale=1">
+<meta charset="UTF-8" />
+<style type="text/css">
+
+</style>
+<SCRIPT TYPE="text/javascript">
+function startCircles() {
+document.querySelector("#mh").startCircles();
+}
+
+function stopCircles() {
+
+document.querySelector("#mh").stopCircles();
+}
+
+
+</SCRIPT>
+</head>
+<body>
+
+<H1>Mold Propagation Simulation</H1>
+<embed CODE="RandomCircles.class"WIDTH="200" HEIGHT="75"id="mh"type="application/x-java-applet;version=1.5.0">
+</embed>
+
+<FORM>
+<INPUT TYPE="BUTTON" VALUE="Start Simulations"
+onClick="startCircles()">
+<INPUT TYPE="BUTTON" VALUE="Stop Simulations"
+onClick="stopCircles()">
+</FORM>
+
+
+
+
+</body>
+</html>

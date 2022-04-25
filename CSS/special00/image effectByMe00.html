@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta name="viewport"content="width=device-width,initial-scale=1">
+<meta charset="utf-8" />
+<link rel="stylesheet" href="/storage/emulated/0/web assets/css/bootstrap.min.css">
+<link rel="stylesheet" href="/storage/emulated/0/web assets/css/font-awesome.css">
+<style type="text/css">
+.member{
+  background:#fff;
+  border-radius:5px;
+  overflow:hidden;
+  box-shadow:0px 0 30px rgba(1,41,112,0.08);
+  text-align:center;
+  transition:0.3s ;
+}
+
+.member .member-img{
+  position:relative;
+  overflow:hidden;
+}
+
+.member .member-img:after{
+  position:absolute;
+  content:"";
+  background:url('/storage/emulated/0/Web prtc00/CSS/special00/img/team-shape.svg') no-repeat center bottom;
+  left:0;
+  bottom:0;
+  width:100%;
+  height:100%;
+  background-size:contain;
+  z-index:1;
+}
+
+.member .social{
+  position:absolute;
+  border-radius:4px;
+  right:-100%;
+  top:38px;
+  opacity:0;
+  background:rgba(255,255,255,0.3);
+  transition:0.4s;
+  z-index:2;
+}
+
+.member .social a{
+  transition:color 0.3s;
+  color:rgba(1,41,112,0.5);
+  margin:15px 12px;
+  line-height:0;
+  display:block;
+}
+
+.member .social a:hover{
+  color:rgba(1,41,112,0.8);
+}
+
+.member .social i{
+  font-size:18px;
+}
+
+.member .member-img:hover .social{
+  opacity:1;
+  right:12px;
+}
+
+/*.member:hover{
+  transform:scale(1.07);
+  box-shadow:0px 0 30px rgba(1,41,112,0.1);
+}*/
+.member .member-img img{
+  transition:0.5s;
+}
+.member:hover .member-img :not(.social){
+ transform:rotate(10deg) scale(1.149);
+ 
+}
+
+
+
+</style>
+</head>
+<body>
+
+<h1>Just practice</h1>
+
+<div class="container" >
+  <div class="member" >
+     <div class="member-img" >
+        <img class="img-fluid"src="/storage/emulated/0/Web prtc00/css/special00/img/team-1.jpg">
+        <div class="social">
+           <a href="#" ><i class="fa fa-facebook-square" ></i></a>
+           <a href="#" ><i class="fa fa-twitter"></i></a>
+           <a href="#" ><i class="fa fa-instagram" ></i></a>
+           <a href="#" ><i class="fa fa-linkedin-square" ></i></a>
+        </div>
+     </div>
+     <h4>Tim booksr</h4>
+  </div>
+</div>
+           
+ 
+
+<script src="/storage/emulated/0/web assets/js/bootstrap.min.js"></script>
+</body>
+</html>

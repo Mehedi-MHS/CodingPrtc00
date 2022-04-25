@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta name="viewport"content="width=device-width,initial-scale=1">
+<meta charset="UTF-8" />
+<style type="text/css">
+pre{
+  width:90%;
+  padding:5px;
+  color:cyan;
+  background:black;
+  border-left:3px solid green;
+  position:relative;
+  overflow:auto;
+}
+pre:before{
+  position:absolute;
+  content:"JS code";
+  width:50px;
+  height:10px;
+  background:orange;
+  display:table;
+  color:black;
+  top:0;
+  right:0;
+  padding:3px;
+  border-bottom-left-radius:7px;
+}
+noscript{
+  color:red;
+}
+
+</style>
+</head>
+<body>
+
+<noscript>
+   Please enable javascript to run this program
+</noscript>
+<h1>call,apply,bind</h1>
+<i>example:00</i>
+<p> <strong>call</strong> and <strong>apply</strong> are same. Their only difference is that <strong>call</strong> uses comma separated words as function parameter whereas <strong>apply</strong> uses array or array like objects as function parameter.<strong>bind</strong> is used to make a separate function</p>
+<p><i>We can use an object method or property in another object using <strong>apply</strong> and <strong>call</strong></i></p>
+<pre></pre>
+<script type="text/javascript"id="pr">
+let person1={
+      name:"person1",
+      age:25,
+      introduce(message){
+          return `${message} I am ${this.name}`;
+      }
+    };
+    
+let person2={
+      name:"person2",
+      age:32
+   };
+
+console.log(person1.introduce("Hi there"));//Hi there I am person1
+//calling "introduce" method in person2
+console.log(person1.introduce.call(person2,"Good morning"));//Good morning I am person2
+</script>
+<script type="text/javascript">
+document.querySelector("pre").innerHTML=document.querySelector("#pr").innerHTML;
+</script>
+</body>
+</html>

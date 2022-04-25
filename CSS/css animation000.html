@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>  </title>
+<meta name="viewport"content="width=device-width,initial-scale=1">
+<meta charset="UTF-8" />
+<style type="text/css">
+.box{
+ max-width:80%;
+ height:200px;
+ background-color:green;
+ display:grid;
+ place-items:center;
+ overflow:hidden;
+}
+.box h1{
+ color:orange;
+}
+.box h1{
+  animation:fadeDown 1s ease-out ;
+  animation-fill-mode:both;/* most important. If use this, text will not be shown before starting animation*/
+  animation-delay:0.4s;
+} 
+@keyframes fadeDown{
+/*0%{opacity:0;transform:translate3d(-100%,0,0);}to{opacity:1;transform:none;}*/
+  /*20%{transform:translate3d(0,10px,0);}40%,45%{opacity:1;transform:translate3d(0,-20px,0);}to{opacity:0;transform:translate3d(0,2000px,0);}
+*/
+10%{transform:perspective(400px) rotateY(1turn);}100%{transform:perspective(400px) rotateY(5turn) rotateZ(-70deg) rotateX(70deg);}
+}
+</style>
+</head>
+<body>
+<p>animation using perspective</p>
+
+<div class="box">
+<h1>Hello</h1>
+</div>
+
+</body>
+</html>

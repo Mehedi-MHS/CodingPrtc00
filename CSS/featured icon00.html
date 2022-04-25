@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta name="viewport"content="width=device-width,initial-scale=1">
+<meta charset="UTF-8" />
+<style type="text/css">
+.box{
+  width:250px;
+  height:200px;
+  background-color:silver;
+  overflow:hidden;/*important*/
+  position:relative;/*important*/
+  text-align:center;/*important*/
+}
+
+.box .featured{
+  width:200px;
+  position:absolute;/*important*/
+  top:18px;
+  right:-68px;
+  transform:rotate(45deg);/*important*/
+  z-index:1;
+  font-size:14px;
+  padding:1px 0 3px 0;
+  background:#4154f1;
+  color:#fff;
+  font-weight:300;
+}
+</style>
+</head>
+<body>
+
+
+<div class="box">
+   <span class="featured" >Featured</span>
+   <h1>iPhone X</h1>
+   <p>RAM : 8GB <br>ROM : 128GB<br>Camera : 125MP</p>
+   
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Demo web worker prtc00</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+  </head>
+  <body>
+    <h3>Web worker 00</h3>
+    <p>Count:<output id="result"></output></p>
+    <button onclick="startWorker()">Start Worker </button>
+  <button onclick="stopWorker()">Stop Worker </button>
+  
+  <script type="text/javascript" charset="utf-8">
+    var w;
+    function startWorker(){
+      if(typeof(Worker)!=="undefined"){
+        if(typeof(w)=="undefined"){
+          w=new Worker("./worker.js");
+        }
+        w.onmessage=function(event){
+          document.getElementById("result").innerHTML=event.data;
+        };
+      }else{
+        document.getElementById('result').innerHTML='Sorry! No web Worker Support :(';
+      }
+    }
+    function stopWorker(){
+      w.terminate(); //kill worker
+      w=undefined;//make worker reusable 
+    }
+  </script>
+  </body>
+</html>

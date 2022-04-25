@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta name="viewport"content="width=device-width,initial-scale=1">
+<meta charset="UTF-8" />
+<style type="text/css">
+
+</style>
+</head>
+<body>
+<h1>Copying text</h1>
+<p>some functionality by me</p>
+<p>document.execCommand("copy")</p>
+<br>
+<textarea id="txt">Some text to copy</textarea><br>
+<button type="button"id="btn">Copy</button>
+<script type="text/javascript">
+var txt=document.querySelector("#txt");
+var btn=document.querySelector("#btn");
+btn.addEventListener("click",function(event){
+  event.preventDefault();//prevents from default operation such as scrollimg to top of the the page when clicked to an anchor <a>
+  txt.select();
+  document.execCommand("copy");
+  btn.innerHTML="Copied";
+});
+txt.addEventListener("input",function(event){
+ event.preventDefault();
+  btn.innerHTML="Copy";
+});
+
+</script>
+
+</body>
+</html>

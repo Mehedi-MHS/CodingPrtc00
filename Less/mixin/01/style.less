@@ -1,0 +1,11 @@
+.rounded-corners (@radius:10px){
+  border-radius:@radius;
+  -webkit-border-radius:@radius;
+  -moz-border-radius:@radius;
+}
+#header {
+  .rounded-corners;
+}
+#footer {
+  .rounded-corners(@radius:15px);
+}

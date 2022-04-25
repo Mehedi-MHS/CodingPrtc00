@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title></title>
+    
+  </head>
+  <body>
+    <code>btoa()</code><p>Binary(default) to ASCII(base64)</p>
+    <code>atob()</code><p>ASCII(base64) to Binary(default)</p>
+    <code id="code"></code>
+    
+  <script type="text/javascript" charset="utf-8">
+    var binary=Date.now();
+    document.write("Binary:"+binary+"\n"+"ASCII(base64):"+btoa(binary));
+    
+    setTimeout(function(){
+         var binary2=Date.now();
+         //binary2=Math.floor(binary2/1000*2000);
+         alert("Binary:"+binary2+"\n"+"ASCII(base64):"+btoa(binary2));
+    },3000);
+   </script>
+  </body>
+</html>

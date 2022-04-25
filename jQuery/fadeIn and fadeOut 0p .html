@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Jquery-fade effect</title>
+<meta name="viewport"content="width=device-width,initial-scale=1">
+<meta charset="UTF-8" />
+<style type="text/css">
+.box{
+  width:80vmin;
+  height:80vmin;
+  background:green;
+  color:white;
+  display:grid;
+  place-items:center;
+}
+</style>
+</head>
+<body>
+
+<div class="box" >
+  <h1>Hello</h1>
+</div>
+<button id="b1">FadeOut()</button>
+<button id="b2">FadeIn()</button>
+<button id="b3">FadeOut(3000)</button>
+<button id="b4">FadeIn(3000)</button>
+<script src="/storage/emulated/0/web assets/js/jquery.min.js">
+//place this script before writing jquery code
+</script>
+<script type="text/javascript">
+$(document).ready(function(){
+$("#b1").click(function(){$(".box").fadeOut()});
+$("#b2").click(function(){$(".box").fadeIn()});
+$("#b3").click(function(){$(".box").fadeOut(3000)});
+$("#b4").click(function(){$(".box").fadeIn(3000)});
+});
+</script>
+
+</body>
+</html>

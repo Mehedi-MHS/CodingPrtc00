@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta name="viewport"content="width=device-width,initial-scale=1">
+<meta charset="utf-8" />
+
+<style type="text/css">
+.item1{
+  width:150px;
+  height:100px;
+}
+.item2{
+  width:100px;
+  height:100px;
+}
+.item3{
+  width:50px;
+  height:100px;
+}
+.green{
+  background-color:green;
+  border:1px solid white;
+}
+.blue{
+  background-color:steelBlue;
+  border:1px solid white;
+}
+.orange{
+  background-color:orange;
+  border:1px solid white;
+}
+</style>
+</head>
+<body>
+<h1>Using jQuery</h1>
+<p>Must use the hiararchary of (jQuery→isotopeJs→customJs)</p>
+<pre onclick="this.textContent=document.querySelector('#m').textContent">Click me to show source code</pre>
+<div class="main_container">
+   <div class="items item1 green"></div>
+   <div class="items item2 blue"></div>
+   <div class="items item3 orange"></div>
+   <div class="items item2 green"></div>
+   <div class="items item1 orange"></div>
+</div>
+
+
+ 
+<!-- must use this hiararchary (jQuery→isotopejs→customjs)-->
+<script src="/storage/emulated/0/web assets/js/jquery.min.js"></script>
+<script src="/storage/emulated/0/web assets/isotope layout/isotope.pkgd.min.js"></script>
+<script type="text/javascript"id="m">
+ $(".main_container").isotope({
+  itemSelector: ".items",
+  layoutMode:"fitRows"
+});
+</script>
+   
+</body>
+</html>

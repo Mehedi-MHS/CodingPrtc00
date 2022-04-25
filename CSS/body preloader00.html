@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html manifest="demo.appcache" >
+<head>
+<title>body preloader</title>
+<meta name="viewport"content="width=device-width,initial-scale=1">
+<meta charset="UTF-8" />
+<link rel="stylesheet"href="/storage/emulated/0/web assets/CSS/bootstrap.min.css">
+<link rel="stylesheet"href="/storage/emulated/0/web assets/CSS/font-awesome.css">
+<style type="text/css">
+.preloader{
+  position:fixed;
+  z-index:999;
+  overflow:hidden;
+  width:100vw;
+  height:100vh;
+  background:steelBlue;
+  display:grid;
+  place-items:center;
+  -webkit-transition:.9s;
+  transition:.9s;
+}
+.preloader .contents{
+  line-height:39px;
+  overflow:hidden;
+}
+
+img{
+max-width:100%;
+}
+.disable{
+  width:0;
+  transition:.9s;
+}
+</style>
+</head>
+<body>
+
+<!--preloader-->
+<div class="preloader">
+  <div class="contents">
+      <img src="/storage/emulated/0/web assets/img/ajax-loader.gif"alt="loader">
+      <p style="margin-left:-13px;color:black;">Loading...</p>
+  </div>
+</div>
+<!--end of preloader-->
+
+<main >
+   <h1>Website is loaded</h1>
+   <img src="/storage/emulated/0/web assets/img/portfolio-1.jpg">
+   <img src="/storage/emulated/0/web assets/img/portfolio-2.jpg">
+   <img src="/storage/emulated/0/web assets/img/portfolio-3.jpg">
+   <img src="/storage/emulated/0/web assets/img/portfolio-4.jpg">
+   <img src="/storage/emulated/0/web assets/img/portfolio-5.jpg">
+   <h1>Website is loaded</h1>
+   <img src="/storage/emulated/0/web assets/img/portfolio-1.jpg">
+   <img src="/storage/emulated/0/web assets/img/portfolio-2.jpg">
+   <img src="/storage/emulated/0/web assets/img/portfolio-3.jpg">
+   <img src="/storage/emulated/0/web assets/img/portfolio-4.jpg">
+   <img src="/storage/emulated/0/web assets/img/portfolio-5.jpg">
+   <h1>Website is loaded</h1>
+   <img src="/storage/emulated/0/web assets/img/portfolio-1.jpg">
+   <img src="/storage/emulated/0/DCIM/Camera/mhs0.jpg">
+   <img src="/storage/emulated/0/web assets/img/portfolio-3.jpg">
+   <img src="/storage/emulated/0/web assets/img/portfolio-4.jpg">
+   <img src="/storage/emulated/0/web assets/img/portfolio-5.jpg">
+   <h1>Website is loaded</h1>
+   <img src="/storage/emulated/0/web assets/img/portfolio-1.jpg">
+   <img src="/storage/emulated/0/web assets/img/portfolio-2.jpg">
+   <img src="/storage/emulated/0/web assets/img/portfolio-3.jpg">
+   <img src="/storage/emulated/0/web assets/img/portfolio-4.jpg">
+   <img src="/storage/emulated/0/web assets/img/portfolio-5.jpg">
+   
+   
+</main>
+   
+
+<script type="text/javascript">
+window.addEventListener("load",function(){
+  document.querySelector(".preloader").classList.add("disable");
+})
+
+
+</script>
+
+</body>
+</html>

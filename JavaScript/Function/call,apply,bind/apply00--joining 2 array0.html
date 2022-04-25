@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta name="viewport"content="width=device-width,initial-scale=1">
+<meta charset="UTF-8" />
+<style type="text/css">
+*{
+  box-sizing:border-box;
+}
+pre{
+  width:90%;
+  padding:5px;
+  color:cyan;
+  background:black;
+  border-left:3px solid green;
+  position:relative;
+  overflow:auto;
+}
+pre:before{
+  position:absolute;
+  content:"JS code";
+  width:50px;
+  height:10px;
+  background:orange;
+  display:table;
+  color:black;
+  top:0;
+  right:0;
+  padding:3px;
+  border-bottom-left-radius:7px;
+}
+noscript{
+  color:red;
+}
+
+</style>
+</head>
+<body>
+<p>Apply method in js function 00</p>
+<h2>Apply method is used for array.which uses arrays individual element as parameter</h2>
+
+
+<noscript>
+   Please enable javascript to run this program
+</noscript>
+<pre></pre>
+<script type="text/javascript"id="pr">
+//before using apply
+var arr1=["a","b"];
+var arr2=[1,2,3];
+arr1.push(arr2); // ["a","b",[1,2,3]]
+ console.log(arr1.length);//3
+ 
+//after using apply
+var arr3=["a","b"];
+var arr4=[1,2,3];
+arr3.push.apply(arr3,arr4);//["a","b",1,2,3]
+console.log(arr3.length);//5
+</script>
+<script type="text/javascript">
+document.querySelector("pre").innerHTML=document.querySelector("#pr").innerHTML;
+</script>
+</body>
+</html>

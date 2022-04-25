@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+</head>
+<body>
+<script type="text/javascript">
+var obj=[{name:"abcde",age:33},{name:"efgh",age:45},{name:"eijkl",age:55}];
+var keys=[],src="e",result=[];
+     for (x in obj[0]){
+       keys.push(x);
+    }
+ document.write("keys are: "+keys+"<br>");//printing keys
+ for(var a=0;a<obj.length;a++){
+   for(var j=0;j<keys.length;j++){
+      if(obj[a][keys[j]].toString().includes(src)){ //must convert to string
+         result.push(obj[a]);
+      }
+   }
+ }
+ document.write("<br>printing values with keys<br>");
+ for(var b=0;b<result.length;b++){
+    for(var c=0;c<keys.length;c++){
+       document.write(keys[c]+":"+result[b][keys[c]]+" ");
+    }
+ }
+
+</script>
+</body>
+</html>

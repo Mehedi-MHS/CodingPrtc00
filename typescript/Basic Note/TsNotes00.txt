@@ -1,0 +1,7 @@
+///#1:
+use command '$tsc filename' to compile filename.ts to filename.js
+//#2(making easier)
+use '$tsc --init' to create tsconfig.json file. There you can modify Typescript settings(eg: source .ts file path and destination output .js file path)
+after setting this, you just type '$tsc' to compile .ts file to .js file . No filename needed.
+//#3(making more easier)
+use '$tsc -w' to automatic run '$tsc' command after modifying a file. (here -w is stands for watch flag)

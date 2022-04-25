@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta name="viewport"content="width=device-width,initial-scale=1">
+<meta charset="UTF-8" />
+<style type="text/css">
+pre{
+  width:90%;
+  padding:5px;
+  color:cyan;
+  background:black;
+  border-left:3px solid green;
+  position:relative;
+  overflow:auto;
+}
+pre:before{
+  position:absolute;
+  content:"JS code";
+  width:50px;
+  height:10px;
+  background:orange;
+  display:table;
+  color:black;
+  top:0;
+  right:0;
+  padding:3px;
+  border-bottom-left-radius:7px;
+}
+noscript{
+  color:red;
+}
+
+</style>
+</head>
+<body>
+
+<noscript>
+   Please enable javascript to run this program
+</noscript>
+<h1>Bind,Apply</h1><p>Ex:01</p>
+<strong>Bind is used to create a new function</strong>
+<pre></pre>
+<script type="text/javascript"id="pr">
+const calculator={
+  add(a,b){
+     return a+b;
+  },
+}
+//general rule
+console.log(calculator.add(2,3)); //5
+
+//Using bind ,,,passing argument directly
+ // const boundfunc=calculator.add(3,4);console.log(boundfunc);//7 we can use as like this(without bind),but sometimes it will not work.So we should use bind to avoid errors
+ const boundfunc=calculator.add.bind(null,5,5);
+ console.log(boundfunc()); //10  use boundfunc(), not boundfunc
+ 
+ //passing arguments to the bound func
+ const boundfunc2=calculator.add.bind(null);
+ console.log(boundfunc2(6,7)); //13 
+ 
+ //using apply
+ console.log(calculator.add.apply(calculator,[1,2])); //here,if you add mire than 2 number in this array,it will take only 1st 2 number here
+</script>
+<script type="text/javascript">
+document.querySelector("pre").innerHTML=document.querySelector("#pr").innerHTML;
+</script>
+</body>
+</html>

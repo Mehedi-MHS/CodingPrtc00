@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <style type="text/css" media="all">
+    /*general styling
+    .style>div{
+      background: #30059a;
+      border:1px solid #5af069;
+    }
+    .style>div{
+      font-size: 2rem;
+      color:#fff;
+      font-weight:500;
+    } */
+    code{
+      color:red;
+      background:#87faf175;
+      padding:3px;
+      border-radius:3px;
+    }
+    
+     .one{
+        background: red !important;
+      }
+    
+/***      **********      ***/
+ 
+  /*main style:01*/
+      .container1{
+        background: silver;
+        width:90%;
+        height:350px;
+        display:grid;
+        grid-template:repeat(4,1fr) /repeat(4,1fr);
+        grid-gap:7px;
+        grid-template-areas: 
+        "hhhh"
+        "mccc"
+        "ffff";
+      }
+   .header{
+     grid-area:h;
+   }
+   .menu{
+     grid-area:m;
+     background:#000000;
+   }
+   .content{
+     grid-area:c;
+     background:#00ccff;
+   }
+  .footer{
+    grid-area:f;
+    background:#f700ff;
+  }
+      
+      
+      
+     
+    </style>
+  </head>
+  <body>
+  
+ 
+  <h3>Style:1:grid-template-areas:(must use in the container)</h3>
+    <p>Make a visual template eg: in container,<code>grid-template-areas:<br />"hhhhhhhhhhhh"<br />"mmmccccccccc"<br />"ffffffffffff";<br /></code>. Here All the "h" will be reaplced by header,"m"=menu,"c"=content and "f"=footer. Then define the <strong>grid-area</strong>. <code>.header{grid-area:h} .menu{grid-area:m}  </code> etc.</p>
+    <div class="style container1">
+      <div class="header">Header</div>
+      <div class="menu">Menu</div>
+      <div class="content">Content</div>
+      <div class="footer">Footer</div>
+    </div>
+ 
+    
+    
+    
+    
+    
+    
+  </body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta name="viewport"content="width=device-width,initial-scale=1">
+<meta charset="UTF-8" />
+<style type="text/css">
+pre{
+  width:90%;
+  padding:5px;
+  color:cyan;
+  background:black;
+  border-left:3px solid green;
+  position:relative;
+  overflow:auto;
+}
+pre:before{
+  position:absolute;
+  content:"JS code";
+  width:50px;
+  height:10px;
+  background:orange;
+  display:table;
+  color:black;
+  top:0;
+  right:0;
+  padding:3px;
+  border-bottom-left-radius:7px;
+}
+noscript{
+  color:red;
+}
+
+</style>
+</head>
+<body>
+
+<noscript>
+   Please enable javascript to run this program
+</noscript>
+<h1>Js callback</h1>
+<pre></pre>
+<script type="text/javascript"id="pr">
+var arr = ["hello","hi","bye","bye"];
+var callback=function(x){
+  return document.write(x +"<br/>");
+}
+arr.forEach (callback);
+</script>
+<script type="text/javascript">
+document.querySelector("pre").textContent=document.querySelector("#pr").innerHTML;
+</script>
+</body>
+</html>
