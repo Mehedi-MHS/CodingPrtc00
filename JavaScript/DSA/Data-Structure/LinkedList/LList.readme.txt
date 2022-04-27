@@ -3,6 +3,12 @@ Linked List - Data Structute
 1: milk-->bread-->egg-->bakon-->null
 2: Header-->bread-->egg-->bakon-->null
 
+insert:
+Header-->bread-->egg-         -->bakon-->null
+                    ↓        ↑
+                    ->cookie->
+
+
 *Null is used to identify the end of linked list.
 *Header is used to identify the start of linked list.
 
