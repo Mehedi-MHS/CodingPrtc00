@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>...</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+ <style>
+.container1,.container2{
+    border: 2px solid skyblue;
+    padding: 10px;
+    background-color:dodgerblue;
+}
+
+
+
+ </style>
+  </head>
+  <body>
+    <h1>PreventDefault() vs StopPropagation()</h1>
+    <p>
+      Both are used to stop browsers default action(eg: click event). But has a
+      little difference.
+    </p>
+    <p>
+      StopPropagation stops event for parent container only.ie: there is a
+      container and it has button child.So if you use PreventDefault(), no
+      action will be fired. And if you use StopPropagation() then button click
+      will work but parent click will not work
+
+      <h2>example: PreventDefault()</h2>
+      <div class="container1">
+          <p>Click anywhere of the box and also on the buttton to see,how PreventDefault() works</p>
+          <button class="btn1">PreventDefault()</button></div>
+    </p>
+<script type="text/javascript">
+    document.querySelector(".btn1").addEventListener("click",(event)=>event.preventDefault());
+    document.querySelector(".container1").addEventListener("click",()=>alert('PreventDefault fired !'));
+</script>
+
+    <h2>example:StopPropagation()</h2>
+      <div class="container2">
+          <p>Click anywhere of the box and also on the buttton to see,how StopPropagation() works</p>
+          <button class="btn2">StopPropagation()</button></div>
+    </p>
+<script type="text/javascript">
+    document.querySelector(".btn2").addEventListener("click",(event)=>event.stopPropagation());
+     document.querySelector(".container2").addEventListener("click",()=>alert('StopPropagation fired !'));
+</script>
+
+ 
+
+  </body>
+</html>

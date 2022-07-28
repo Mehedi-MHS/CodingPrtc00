@@ -1,0 +1,15 @@
+* {
+  box-sizing: border-box;
+}
+
+.fancyborder {
+  width: 80%;
+  height: 80%;
+  padding: 10px;
+  border: 2px groove magenta;
+  border-radius: 5px;
+}
+
+.bg-blue {
+  background-color: dodgerblue;
+}

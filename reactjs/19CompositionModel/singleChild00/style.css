@@ -1,0 +1,18 @@
+* {
+  box-sizing: border-box;
+}
+.FancyBorder {
+  width: 250px;
+  height: 250px;
+  border: 2px double magenta;
+}
+
+.bg-blue {
+  background-color: dodgerblue;
+}
+.Dialogue-title {
+  color: Orange;
+}
+.Dialogue-messege {
+  color: black;
+}

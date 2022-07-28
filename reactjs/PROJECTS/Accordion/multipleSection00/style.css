@@ -1,0 +1,34 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: DodgerBlue;
+}
+
+.accordion {
+  width: 95vmin;
+  height: auto;
+  border: 1px solid silver;
+  border-radius: 5px;
+}
+
+.accordion-title {
+  font-weight: 600;
+  font-size: large;
+  padding: 5px;
+  background-color: antiquewhite;
+  border-bottom: 1px solid grey;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-around;
+}
+
+.accordion-content {
+  padding: 6px;
+  word-wrap: break-word;
+  font-size: large;
+  color: whitesmoke;
+  font-weight: 300;
+}
