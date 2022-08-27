@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carousel slider</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+      }
+      .slider {
+        width: 90%;
+        max-width: 800px;
+        height: 250px;
+        position: relative;
+        margin: 0px auto;
+        border-radius: 7px;
+        overflow: hidden;
+      }
+
+      .slide {
+        width: 100%;
+        max-width: 800px;
+        height: 250px;
+        position: absolute;
+        transition: all 0.5s;
+      }
+      .slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .btn {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        z-index: 10;
+        border: none;
+        font-size: 18px;
+        background: #fff;
+        padding: 10px;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+
+      .btn:active {
+        transform: scale(1.1);
+      }
+
+      .btn-prev {
+        top: 45%;
+        left: 2%;
+      }
+      .btn-next {
+        top: 45%;
+        right: 2%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Carousel Slider prtc</h1>
+
+    <div class="slider">
+      <div class="slide"><img src="img1.jpg" alt="" /></div>
+      <div class="slide"><img src="img2.jpg" alt="" /></div>
+      <div class="slide"><img src="img3.jpg" alt="" /></div>
+      <div class="slide"><img src="img4.jpg" alt="" /></div>
+
+      <button class="btn btn-next">&rsaquo;</button>
+      <button class="btn btn-prev">&lsaquo;</button>
+    </div>
+
+    <p>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum porro
+      cum soluta voluptatum sit aut deleniti voluptatem quas, tenetur error nam
+      consequuntur eius alias quia nobis natus incidunt atque blanditiis!
+    </p>
+    <script>
+      const slides = document.querySelectorAll(".slide");
+      let currSlide = 0;
+      let maxSlide = slides.length - 1;
+      const nextbtn = document.querySelector(".btn-next");
+      nextbtn.addEventListener("click", function () {
+        if (currSlide == maxSlide) {
+          currSlide = 0;
+        } else {
+          currSlide++;
+        }
+
+        slides.forEach(function (slide, index) {
+          slide.style.transform = `translateX(${100 * (index - currSlide)}%)`;
+        });
+      });
+
+      const prevbtn = document.querySelector(".btn-prev");
+      prevbtn.addEventListener("click", function () {
+        if (currSlide == 0) {
+          currSlide = maxSlide;
+        } else {
+          currSlide--;
+        }
+
+        slides.forEach(function (slide, index) {
+          slide.style.transform = `translateX(${100 * (index - currSlide)}%)`;
+        });
+      });
+    </script>
+  </body>
+</html>
