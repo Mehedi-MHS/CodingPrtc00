@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+      }
+      .maincontainer {
+        width: 100%;
+        display: table;
+        padding: 5px;
+      
+       
+      }
+
+      .card {
+        width: 270px;
+        height: 300px;
+        border-radius: 2px;
+        border: 1px solid grey;
+        text-align: center;
+        position: relative;
+        float: left;
+        margin: 2rem;
+        background: white;
+      }
+
+      .card > img {
+        width: 100%;
+      }
+
+      .card > .name {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin: 7px;
+      }
+      .card .text {
+        font-size: 15px;
+      }
+
+      .card .selectbtn {
+       
+        width: 50%;
+        height: 10%;
+        font-size: 13px;
+        border: none;
+        border-radius: 3px;
+        position: absolute;
+        bottom: 10px;
+        left: 25%;
+      }
+      
+      .selectedbox{
+        background: lightGreen;
+        padding: 10px;
+        margin-top: 15px;
+        position: relative;
+      
+      }
+      .btn-primary{ background-color: dodgerblue;
+        color: white;}
+      .greybtn{background: grey;color: black;}
+      .selectedbox ul {list-style-type: number;}
+    </style>
+  </head>
+  <body>
+    <h1>Favourite players</h1>
+
+    <section class="maincontainer">
+      <div class="card">
+        <img src="player.jpg" alt="" />
+        <div class="name">Lionell Messi</div>
+        <p class="text">120 Goals - 136 awards</p>
+        <button
+          class="selectbtn btn-primary"
+          playerName="Lionell Messi"
+          onclick="select(this)"
+        >
+          Select
+        </button>
+      </div>
+      
+       <div class="card">
+        <img src="player.jpg" alt="" />
+        <div class="name">Diego Maradona</div>
+        <p class="text">121 Goals - 106 awards</p>
+        <button
+          class="selectbtn btn-primary"
+          playerName="Diego Maradona"
+          onclick="select(this)"
+        >
+          Select
+        </button>
+      </div>
+      
+       <div class="card">
+        <img src="player.jpg" alt="" />
+        <div class="name">Player 3</div>
+        <p class="text">10 Goals - 16 awards</p>
+        <button
+          class="selectbtn btn-primary"
+          playerName="Player 3"
+          onclick="select(this)"
+        >
+          Select
+        </button>
+      </div>
+      
+       <div class="card">
+        <img src="player.jpg" alt="" />
+        <div class="name">Player 4</div>
+        <p class="text">120 Goals - 136 awards</p>
+        <button
+          class="selectbtn btn-primary"
+          playerName="Player 4"
+          onclick="select(this)"
+        >
+          Select
+        </button>
+      </div>
+      
+       <div class="card">
+        <img src="player.jpg" alt="" />
+        <div class="name">Player 5</div>
+        <p class="text">120 Goals - 136 awards</p>
+        <button
+          class="selectbtn btn-primary"
+          playerName="Player 5"
+          onclick="select(this)"
+        >
+          Select
+        </button>
+      </div>
+    </section>
+    
+    <div class="selectedbox">
+      <h2>Selected players:</h2>
+      
+      <ul id="playerlist">
+      </ul>
+      
+    </div>
+     <script type="text/javascript" charset="utf-8">
+     var totalPlayer=[];//empty array to save selected player name
+       function select(player){
+        player.disabled=true;
+        player.classList.remove('btn-primary');
+        player.classList.add('greybtn');
+         totalPlayer.push(player.getAttribute('playerName'));//inserting new selected payer name
+        
+         var list='';
+         for(var i=0;i<totalPlayer.length;i++){
+           list+=`<li>${totalPlayer[i]}</li>`;
+         }
+         document.getElementById('playerlist').innerHTML=list;
+         
+       }
+     </script>
+  </body>
+</html>
