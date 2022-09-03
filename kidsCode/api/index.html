@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      .category_box {
+        width: 100%;
+        height: 60px;
+        display: flex;
+        display: -webkit-flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        background-color: white;
+        box-shadow: 1px 2px 4px black;
+        list-style-type: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Dynamic News Category</h2>
+    <ul class="category_box"></ul>
+
+    <script>
+      function loadNews() {
+        fetch("https://openapi.programming-hero.com/api/news/categories")
+          .then((res) => res.json())
+          .then((data) => displayNews(data));
+      }
+
+      function displayNews(obj) {
+        var data = "";
+        for (var x of obj.data.news_category) {
+          data += `<li>${x.category_name}</li>`;
+        }
+        document.querySelector(".category_box").innerHTML = data;
+      }
+
+      loadNews();
+    </script>
+  </body>
+</html>
