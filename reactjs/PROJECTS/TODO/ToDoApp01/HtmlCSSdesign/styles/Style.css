@@ -1,0 +1,136 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Sans-Serif";
+}
+
+:root {
+  --bgcolor: silver;
+  --danger: red;
+  --success: green;
+}
+
+body {
+  background-color: var(--bgcolor);
+}
+
+.btn {
+  display: inline-block;
+  border: none;
+  border-radius: 3px;
+  padding: 4px 8px;
+  font-size: 1rem;
+  color: white;
+  box-shadow: 0px 1px 1px black;
+}
+.btn:hover {
+  animation: btnAnimation 0.5s 1;
+}
+@keyframes btnAnimation {
+  0% {
+    box-shadow: none;
+    opacity: 0.7;
+  }
+}
+.success {
+  background-color: var(--success);
+}
+.primary {
+  background: dodgerBlue;
+}
+.danger {
+  background: var(--danger);
+}
+nav {
+  width: 100%;
+  background-color: orangered;
+  padding: 5px;
+}
+nav ul {
+  list-style-type: none;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  display: -webkit-flex;
+  justify-content: space-around;
+}
+
+nav ul li:nth-child(1) {
+  font-weight: 900;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.main {
+  margin-top: 15px;
+}
+
+.container {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-template: 1fr 1fr / 1fr;
+  place-items: center;
+  grid-row-gap: 25px;
+}
+
+/* Input Container component*/
+
+.main .container .inputContainer {
+  width: 80%;
+  padding: 30px 10px;
+  border-radius: 3px;
+  background: white;
+  box-shadow: 0px 1px 3px black;
+}
+
+.inputContainer form {
+  display: grid;
+  grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+  grid-row-gap: 15%;
+}
+.inputContainer form input {
+  grid-column: 1/-1;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid black;
+}
+.inputContainer form button {
+  grid-row-start: 2;
+  grid-column: 2/3;
+}
+
+/* Result Container component */
+.resultContainer {
+  width: 95%;
+  padding: 10px;
+  box-shadow: 0px 1px 2px pink;
+  background: steelBlue;
+}
+
+.resultContainer .result {
+  width: 95%;
+  border-radius: 3px;
+  padding: 10px 5px;
+  margin: 10px auto;
+  border: 1px solid white;
+  box-shadow: 0px 1px 1px black;
+}
+
+.resultContainer .result .values {
+  margin-bottom: 15px;
+}
+.resultContainer .result .btn-group {
+  display: flex;
+  display: -webkit-flex;
+  justify-content: space-around;
+}
+
+/* for tablet*/
+@media only screen and (min-width: 728px) {
+  .container {
+    grid-template: 1fr / 1fr 1fr;
+    grid-column-gap: 25px;
+  }
+}

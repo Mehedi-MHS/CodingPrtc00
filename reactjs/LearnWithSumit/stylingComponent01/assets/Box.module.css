@@ -1,0 +1,20 @@
+.box1 {
+  width: 90vw;
+  height: 90vh;
+  border: 1px solid black;
+  border-radius: 3px;
+  margin: 3%;
+  background: dodgerblue;
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+
+.box2 {
+  width: 70%;
+  height: 70%;
+  position: absolute;
+}
+.shadow {
+  box-shadow: 0px 1px 3px black;
+}
