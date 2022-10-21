@@ -1,0 +1,28 @@
+.resultContainer {
+  width: 95%;
+  padding: 10px;
+  box-shadow: 0px 1px 2px pink;
+  background: steelBlue;
+  margin: auto;
+}
+
+.resultContainer .result {
+  width: 95%;
+  border-radius: 3px;
+  padding: 10px 5px;
+  margin: 10px auto;
+  border: 1px solid white;
+  box-shadow: 0px 1px 1px black;
+  margin: 2% auto;
+}
+
+.resultContainer .result .values {
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+  color: white;
+}
+.resultContainer .result .btn_group {
+  display: flex;
+  display: -webkit-flex;
+  justify-content: space-around;
+}
