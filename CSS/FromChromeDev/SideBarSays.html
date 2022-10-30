@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Responsive Sidebar</title>
+    <style type="text/css" media="all">
+      *{
+        box-sizing: border-box;
+        font-family: none;
+      }
+      .resize-window{
+        width: 90vw;
+        height: 70vh;
+        overflow: auto; /* imp for resize */
+        resize: both;
+        box-shadow: 0px 1px 2px black;
+        margin-bottom:14px;
+      }
+      code{
+        padding:3px;
+        border-radius:2px;
+        border:1px solid Darkred;
+        font-weight: 500;
+        background:rgba(255,0,76,0.2);
+      }
+/*       starting main content */
+.parent{
+  width:100%;
+  height:100%;
+  display:grid;
+  grid-template-columns:minmax(150px,25%) 1fr;
+}
+.sidebar{
+  background:coral;
+  padding: 1rem;
+  
+}
+.content{
+  background:yellow;
+padding:1rem;
+  
+  
+}
+      
+    </style>
+  </head>
+  <body>
+    <p>Example:3 -> Rersponsive Sidebar</p>
+    <code>grid-template-columns:minmax(&lt;min&gt;,&lt;max&gt;</code>
+    
+    <div class="resize-window">
+      <div class="parent">
+        <div class="sidebar">
+          <p>Min:150px / max:25%</p>
+        </div>
+        <div class="content">
+          <p>This element takes the second grid position (1fr), meaning it takes up the rest of the remaining space</p>
+        </div>
+        
+      </div>
+      
+    </div>
+    
+  </body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Responsive design using flexbox</title>
+    <style type="text/css" media="all">
+      *{
+        box-sizing: border-box;
+        font-family: none;
+      }
+      .resize-window{
+        width: 90vw;
+        height: 70vh;
+        overflow: auto; /* imp for resize */
+        resize: both;
+        box-shadow: 0px 1px 2px black;
+        margin-bottom:14px;
+      }
+      code{
+        padding:3px;
+        border-radius:2px;
+        border:1px solid Darkred;
+        font-weight: 500;
+        background:rgba(255,0,76,0.2);
+      }
+/*       starting main content */
+
+.parent{
+  width:90%;
+  height: 90%;
+  display:flex;
+  flex-wrap:wrap; /*for auto line break*/
+  justify-content:center;
+}
+.box-stretching{
+  flex:1 1 150px; /*stretching*/
+  margin: 5px;
+  background: pink;
+}
+
+.box-no-stretching{
+  flex:0 1 150px; /*No stretching*/
+  margin: 5px;
+  background: steelBlue;
+}
+    </style>
+  </head>
+  <body>
+    <p>Example:2->Here I have used a resizable box to test the result,as phones browser donot support direct resizing<code>overflow and resize</code> is related to resizing</p>
+    <code>flex: 0 1 &lt;baseWidth&gt;</code>
+    <h1>Box Stretching</h1>
+    <p>Fill the parent</p>
+    <div class="resize-window">
+      <div class="parent">
+        <div class="box-stretching"></div>
+        <div class="box-stretching"></div>
+        <div class="box-stretching"></div>
+      </div>
+    </div>
+    <h1>Box no Stretching</h1>
+    <div class="resize-window">
+      <div class="parent">
+        <div class="box-no-stretching"></div>
+        <div class="box-no-stretching"></div>
+        <div class="box-no-stretching"></div>
+      </div>
+    </div>
+    
+    <p>Now resize the box from bottom right corner and see responsive result</p>
+    
+  </body>
+</html>
