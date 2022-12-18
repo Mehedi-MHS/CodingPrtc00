@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blur background</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .parent {
+        width: 95vw;
+        height: 95vh;
+        background: linear-gradient(to top right, green, dodgerBlue, magenta);
+        display: grid;
+        place-items: center;
+      }
+
+      .child {
+        width: 45%;
+        height: 45%;
+        border-radius: 6px;
+        display: grid;
+        place-items: center;
+        background: rgba(255, 255, 255, 0.4);
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+      }
+
+      .child > p {
+        font-size: 2rem;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Blur background using</h1>
+    <code>backdrop-filter:blur(7px)</code>
+    <div class="parent">
+      <div class="child"><p>hello world</p></div>
+    </div>
+  </body>
+</html>

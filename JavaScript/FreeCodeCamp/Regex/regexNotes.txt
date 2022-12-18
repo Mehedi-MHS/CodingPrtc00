@@ -1,0 +1,67 @@
+REGULAR EXPRESSIONS NOTES
+=============================================
+--->for more regex cheatsheets , find LearningItems/JavaScript/RegularExpressions/
+
+
+
+=====Notes========
+
+->In an earlier challenge, you used the caret character (^) inside a character set to create a negated character set in the form [^thingsThatWillNotBeMatched]. Outside of a character set, the caret is used to search for patterns at the beginning of strings.
+->You can search the end of strings using the dollar sign character $ at the end of the regex.
+
+-> /<.*>/ explaination: here '.' matches any character and '*' matches any occurances. That means '.*' will match anything including first.'<' and last '>'
+
+-> (?=...) positive Lookahead -  A positive lookahead is used as (?=...) where the ... is the required part that is not matched.
+     ex: "qu".match(/q(?=u)/); -> ["q"]
+
+-> (?!...) negative Lookahead - A negative lookahead is used as (?!...) where the ... is the pattern that you do not want to be there. The rest of the pattern is returned if the negative lookahead part is not present.
+          "qt".match(/q(?!u)/);-> ["q"]
+
+-> ( | ) to match mixed group of characters
+
+======[[]]=========
+
+
+=====ShortCuts=======
+\w is equals to [A-Za-z0-9_] matches all alphabets,numbers & underscore.
+\W is equals to [^A-Za-z0-9_] matches everything but(except) alphabets,numbers,underscore
+\d is equals to [0-9] matches all numbers
+\D is equals to [^0-9] matches except numbers
+\s is equals to [ \f\t\n\v] matches whitespace(space between 2 word),newline,formfeed,tab etc. characters
+
+======[[]]==========
+
+
+
+. wildcard to match anything
+==== from internet===
+*	It will match the previous element zero or more times.	\d*\.\d	".0", "19.9", "219.9"
+
++	It will match the previous element one or more times.	"se+"	"see" in "seen", "se" in "sent"
+
+?	It will match the previous element zero or one time.	"mai?n"	"man", "main"
+
+{ n }	It will match the previous element exactly n times.	",\d{3}"	",043" in "1,043.6", ",876", ",543", and ",210" in "9,876,543,210"
+
+{ n ,}	It will match the previous element at least n times.	"\d{2,}"	"166", "29", "1930"
+
+{ n , m }	It will match the previous element at least n times, but no more than m times.	"\d{3,5}"	"166", "17668"   "19302" in "193024"
+
+*?	It will match the previous element zero or more times, but as few times as possible.	\d*?\.\d	".0", "19.9", "219.9"
+
++?	It will match the previous element one or more times, but as few times as possible.	"se+?"	"se" in "seen", "se" in "sent"
+
+??	It will match the previous element zero or one time, but as few times as possible.	"mai??n"	"man", "main"
+
+{ n }?	It will match the preceding element exactly n times.	",\d{3}?"	",043" in "1,043.6", ",876", ",543", and ",210" in "9,876,543,210"
+
+{ n ,}?	It will match the previous element at least n times, but as few times as possible.	"\d{2,}?"	"166", "29", "1930"
+
+{ n , m }?	It will match the previous element between n and m times, but as few times as possible.	"\d{3,5}?"	"166", "17668"   "193", "024" in "193024"
+
+
+
+
+
+
+

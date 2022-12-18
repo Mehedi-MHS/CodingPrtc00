@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        padding: 10px;
+        border: 1px solid darkolivegreen;
+        width: 200px;
+        height: 100px;
+        background: cyan;
+      }
+    </style>
+  </head>
+  <body>
+    <p>AppendChild method</p>
+    <button type="button" onClick="createChild()">
+      Create and append Child
+    </button>
+
+    <div id="root"></div>
+
+    <script id="one">
+      var root = document.getElementById("root");
+
+      function createChild() {
+        var div = document.createElement("div");
+        div.className = "container";
+
+        var h1 = document.createElement("h1");
+        var p = document.createElement("p");
+        var txt = document.createTextNode("Hello world");
+        p.appendChild(txt);
+        h1.appendChild(p);
+        div.appendChild(h1);
+        root.appendChild(div);
+      }
+    </script>
+  </body>
+</html>

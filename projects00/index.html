@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1 class="title">Todo app</h1>
+    <div class="mainContainer">
+      <div class="inputArea">
+        <form>
+          <input type="text" placeholder="Enter something.." />
+          <input type="submit" value="ADD TODO" />
+        </form>
+      </div>
+      <div class="taskArea">
+        <div class="task-title">NEW TASKS</div>
+        <ul class="task-items">
+          <li><input type="checkbox" /> &nbsp;<label>Task 1</label></li>
+        </ul>
+      </div>
+      <div class="completedArea">
+        <div class="task-title">COMPLETED TASKS</div>
+        <ul class="completed-tasks">
+          <li>
+            <label>Task 1</label
+            ><button type="button" class="delete">DELETE</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,5 @@
+1: Do not use 'var' in JavaScript!
+
+
+2: spread operator unpacks all contents of an array into a comma-separated list.
+

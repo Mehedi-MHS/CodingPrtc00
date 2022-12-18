@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="btn" type="button">Click me</button>
+    <div class="result">...</div>
+
+    <script>
+      var btn = document.getElementById("btn"),
+        rslt = document.querySelector(".result");
+      btn.addEventListener("click", (event) => {
+        alert(event.screenX);
+        rslt.innerHTML = JSON.stringify(event);
+      });
+    </script>
+  </body>
+</html>
