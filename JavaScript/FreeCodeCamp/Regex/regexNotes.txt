@@ -41,6 +41,8 @@ REGULAR EXPRESSIONS NOTES
 
 ?	It will match the previous element zero or one time.	"mai?n"	"man", "main"
 
+ ^\s*$ to match empty string "" or ''
+
 { n }	It will match the previous element exactly n times.	",\d{3}"	",043" in "1,043.6", ",876", ",543", and ",210" in "9,876,543,210"
 
 { n ,}	It will match the previous element at least n times.	"\d{2,}"	"166", "29", "1930"
