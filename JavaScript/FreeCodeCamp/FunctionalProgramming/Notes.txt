@@ -16,4 +16,47 @@ FreeCodeCamp Functional Programming Notes
 
   ii)Declare function parameters - any computation inside a function depends only on the arguments passed to the function, and not on any global object or variable.
 
+4: Using the slice method instead of splice helps to avoid any array-mutating side effects.
+
+5: array.slice() method:
+   ------------------------
+   i)slice(startIndex,endIndex) - copies from startIndex to endIndex
+   ii)slice(startIndex) - copies from startIndex to end of the array
+   iii) slice() - copies the whole array
+
+6: array.splice() method:
+   ------------------------
+   i)splice(startIndex,endIndex) - dletes from startIndex to endIndex
+   ii)slice(startIndex) - deletes from startIndex to end of the array
+
+7: array.reduce() method:
+   -----------------------
+  array.reduce((accumulator,currentElement,index,array)=>(),initialValue(optional));
+
+  The first argument is known as the accumulator, which gets assigned the return value of the callback function from the previous iteration, 
+  the second is the current element being processed,
+  the third is the index of that element 
+  and the fourth is the array upon which reduce is called.
+
+
+8: array.sort() method:
+   --------------------
+   array.sort((a,b)=>...return something);
+ i) If compareFunction(a,b) returns a value less than 0 for two elements a and b, then a will come before b.
+ ii) If compareFunction(a,b) returns a value greater than 0 for two elements a and b, then b will come before a.
+ iii) If compareFunction(a,b) returns a value equal to 0 for two elements a and b, then a and b will remain unchanged.
+ iv) only array.sort() sorts alphabets. In case of alphabets,(i-iii) rule is not applicable
+ ** A side effect of the sort method is that it changes the order of the elements in the original array. 
+ In other words, it mutates the array in place.
+ One way to avoid this is to first concatenate an empty array to the one being sorted (remember that slice and concat return a new array), then run the sort method.
+
+9: str.split(argument):
+  ---------------------
+  converts string into array
+  argument can be any character,space,number,symbol,regex,word etc.
+
+10: arr.join(argument):
+    -------------------
+    converts array into string
+    arguments can be any character,word,number,space,symbol etc. 
 

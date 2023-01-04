@@ -1,3 +1,11 @@
+//Best way is using spread operator to copy an array
+let a = [1, 2, 3];
+let copyA = [...a];
+copyA.push(4);
+console.log("a:", a, "Copy a:", copyA);
+//a: [ 1, 2, 3 ] Copy a: [ 1, 2, 3, 4 ]
+
+//Another methods
 //shallow copy:If change one,another will be changed
 
 var arr1 = [];
