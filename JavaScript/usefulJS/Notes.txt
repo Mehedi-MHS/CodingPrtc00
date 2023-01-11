@@ -1,0 +1,11 @@
+#1 - convert any character to binary method:
+  
+  i) get the character
+  ii) get character code (decimal) using .charCodeAt()
+  iii) finally convert the decimal code into binary
+
+#2 - convert binary to any character method:
+  i) let bin="binaryCodeHere"
+  ii) let decimal = parseInt(bin,2); to convert binary to decimal
+  iii) String.fromCharCode(decimal); to convert decimal number to character
+  
