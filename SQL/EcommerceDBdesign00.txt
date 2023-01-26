@@ -1,0 +1,21 @@
+Ecommerce Database Design ideas:
+=================================
+
+
+- From w3schools SQL tutorial
+
+Products table:
+---------------
+ProductID-unique for a specific product
+ProductName- Product Name
+SupplierID- vendor unique ID
+CategoryID-unique for a specific category
+Unit- eg: 10 boxes x 20 bags
+Price- Product Price 
+
+Order Table:
+------------
+OrderDetailD- Total Orders auto increment value.
+OrderID- always unique for a specific customer
+ProductID-specefic product ID
+Quantity-quantity of product that customer ordered

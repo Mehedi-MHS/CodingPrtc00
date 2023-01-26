@@ -19,6 +19,8 @@ REGULAR EXPRESSIONS NOTES
 
 -> ( | ) to match mixed group of characters
 
+-> \( or \) to patch parentheses ( or  )
+
 ======[[]]=========
 
 
