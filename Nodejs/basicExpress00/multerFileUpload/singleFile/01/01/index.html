@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Multer single file upload 001</title>
+    <style type="text/css" media="all">
+      form{
+        padding: 5px;
+        border: 1px solid grey;
+        border-radius: 7px;
+        background: rgba(46,193,229,0.306);
+      }
+    </style>
+  </head>
+  <body>
+    <p>Single file upload - Multer</p>
+    
+    <form action="http://localhost:3000/uploadfile" method="POST" enctype="multipart/form-data">
+      <input type="file" name="mhs" /><br /><br />
+      <input type="submit"/>
+    </form>
+  </body>
+</html>

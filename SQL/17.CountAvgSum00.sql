@@ -13,4 +13,8 @@ SELECT AVG(price) FROM Products;
  --AVG(price)
  --25.7500
 
+ SELECT SUM(price) FROM Products;
+ --SUM(price)
+ --103
+
 

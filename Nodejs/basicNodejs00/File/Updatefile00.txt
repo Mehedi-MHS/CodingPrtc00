@@ -1,0 +1,2 @@
+This is old text...This is new updated text
+This is new text updated by UpdateByAppendFile00.js

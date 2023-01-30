@@ -1,0 +1,14 @@
+{
+  "name": "express-module00",
+  "version": "1.0.0",
+  "description": "express template containing all the necessary module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "mhs",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

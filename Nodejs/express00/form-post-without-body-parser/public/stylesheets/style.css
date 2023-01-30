@@ -1,0 +1,36 @@
+body{
+  background: #39f7d2;
+}
+h1 {
+  color: #04ae97;
+}
+.box {
+  width: 90%;
+  height: 150px;
+  display: table;
+  border-radius: 7px;
+  padding: 9px;
+  text-align: center;
+  font-size: 25px;
+  color: #173bd5;
+  background: #f64bf8a6;
+}
+form {
+  width: 80%;
+  height: 100px;
+  border-radius: 6px;
+  padding: 8px;
+  background: #4ea985;
+  display:-webkit-flex;
+  display: flex;
+  -webkit-flex-direction:column;
+  flex-direction: column;
+  -webkit-align-items:center;
+  align-items: center;
+  line-height: 7px;
+}
+input[type=text]{
+  border: 1px solid black;
+  border-radius:3px;
+  padding: 5px;
+}

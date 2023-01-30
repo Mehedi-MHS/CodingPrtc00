@@ -1,0 +1,10 @@
+<%- include('../template/header'); -%>
+<h1>Express form post request 00</h1>
+ <form action="/form"method="post">
+   <input type="text"name="firstname"placeholder="Enter firstname"><br/>
+   <input type="text"name="lastname"placeholder="Enter lastname"><br/>
+   <input type="submit">
+ </form>
+ <br/>
+<div class="box"><%= fullname %></div>
+<%- include('../template/footer') -%>

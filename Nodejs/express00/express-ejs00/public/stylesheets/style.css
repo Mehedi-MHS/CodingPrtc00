@@ -1,0 +1,17 @@
+body {
+  background: lightGreen;
+}
+h1 {
+  color:#4510bc;
+}
+.box {
+  width: 90%;
+  height:100px;
+  display: table;
+  padding: 9px;
+  border-radius: 7px;
+  text-align: center;
+  background: #9ce8fa;
+  color: #1c97b5;
+  font-size: 25px;
+}

@@ -1,0 +1,11 @@
+include header.pug
+  
+   h1 Handling post request in express
+   br
+   form(action="form",method="post")
+    input(type="text",name="name",placeholder ="Enter your name")
+    input(type="submit")
+    br
+    .result #{name}
+   
+   include footer.pug

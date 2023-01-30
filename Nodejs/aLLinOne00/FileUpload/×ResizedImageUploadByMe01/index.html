@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <title>Resized Image Upload By me</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <style type="text/css" media="all">
+    canvas {
+      background: orange;
+    }
+    img {
+      border: 1px solid blue;
+    }
+  </style>
+</head>
+<body>
+  <p>
+    Client Side Resized Image Upload By me 01
+  </p>
+
+
+  <input type="file" id="mh" accept="image/*" />
+  <button onclick="uploadfile()">Upload</button>
+  <!--
+  <canvas id="can"></canvas>
+  <img id="im" />
+  <form name="form1"enctype="multipart/form-data">
+    <input id="hidden_input"type="hidden" name="profilepic"value="" />
+  </form>
+  -->
+  <script type="text/javascript" charset="utf-8">
+
+    function uploadfile() {
+      
+      var file = document.getElementById("mh").files[0];
+      var filename = file.name;
+      alert(filename);
+
+      var reader = new FileReader();
+      reader.onload = function(e) {
+        var img = new Image();
+        img.onload = function() {
+          var canvas = document.createElement("canvas");
+          canvas.width = canvas.height = 250;
+          var ctx = canvas.getContext("2d");
+          ctx.clearRect(0, 0, canvas.width, canvas.height);
+          ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+          var base64string = canvas.toDataURL("image/png");
+          var base64image=base64string.split(";base64,").pop();
+          base64image.replaceAll(" ","+");
+         alert(base64image);
+    /*    let imgdata=null;
+let blob = document.querySelector("#canvas").toBlob(function(blob) {
+				imgdata = new File([blob], 'test.png', { type: 'image/png' });
+			}, 'image/png');
+*/
+          var formdata=new FormData();
+          formdata.append("profilepic",base64image);
+          var xhr = new XMLHttpRequest();
+          xhr.open("POST","http://localhost:3000/upload", true);
+          xhr.onload = function() {
+            if ( xhr.status == 200) {
+              alert("√Successfully file uploaded");
+            } else {
+              alert("Error! Failed to upload file");
+            }
+          }
+          alert(formdata);
+          xhr.send(formdata);
+        };
+        img.src = e.target.result;
+
+      };
+      reader.readAsDataURL(file);
+
+    }
+  </script>
+</body>
+</html>
