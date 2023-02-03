@@ -27,3 +27,18 @@ OrderID CustomerName    OrderDate
 10309   Lorem Ipsum     1996-09-10
 
  */
+
+
+/*
+
+SQL INNER JOIN Keyword
+The INNER JOIN keyword selects records that have matching values in both tables.
+
+INNER JOIN Syntax
+SELECT column_name(s)
+FROM table1
+INNER JOIN table2
+ON table1.column_name = table2.column_name;
+
+ */
+
