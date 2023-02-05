@@ -103,3 +103,6 @@ LEFT (OUTER) JOIN: Returns all records from the left table, and the matched reco
 RIGHT (OUTER) JOIN: Returns all records from the right table, and the matched records from the left table
 FULL (OUTER) JOIN: Returns all records when there is a match in either left or right table
 
+--------------- Prevent SQL injection -------------
+NOTE: Use parameters to prevent SQL injection. parameters are mostly known as 
+      prepared statements.
