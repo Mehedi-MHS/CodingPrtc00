@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive header by chatGPT</title>
+    <style type="text/css">
+      * {
+        box-sizing: border-box;
+        font-family: none;
+        margin: none;
+      }
+      body {
+        background-color: aliceblue;
+      }
+      .container1 {
+        display: grid;
+        grid-template: 1fr /1fr 1fr;
+        background: silver;
+        grid-gap: 15px;
+      }
+      .container1 .one {
+        padding: 16px;
+        width: 100%;
+        background: darkBlue;
+        color: white;
+      }
+      .container1 .two {
+        background: DarkRed;
+        color: white;
+        font-size: 2rem;
+      }
+
+      .container2 {
+        display: grid;
+        grid-template: 1fr /1fr 1fr;
+        background: silver;
+        grid-gap: 15px;
+      }
+      .container2 .one {
+        padding: 16px;
+        width: 100%;
+        background: darkBlue;
+        color: white;
+        order: 2; /* change the order of grid/flex childrens */
+      }
+      .container2 .two {
+        background: DarkRed;
+        color: white;
+        font-size: 2rem;
+      }
+
+      /*  @media (max-width: 767px) */
+    </style>
+    <link
+      rel="stylesheet"
+      href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css  "
+    />
+  </head>
+
+  <body>
+    <div class="container1">
+      <div class="one">One</div>
+      <div class="two">Two</div>
+    </div>
+    <div class="container2">
+      <div class="one">One</div>
+      <div class="two">Two</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        display: none;
+        width: 100px;
+        height: 100px;
+        background: pink;
+      }
+      .red {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box"></div>
+      <button id="btn">change</button>
+    </div>
+
+    <script>
+      document.getElementById("btn").addEventListener("click", function () {
+        document.querySelector(".box").classList.toggle("red");
+      });
+    </script>
+  </body>
+</html>
